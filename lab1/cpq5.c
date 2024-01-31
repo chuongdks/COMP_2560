@@ -16,7 +16,7 @@ int main(int argc, char *argv[]){
         exit(1);
     }
 
-    //2. Read up to '1' bytes from 'fd1' and store the read data into 'buffer', then display it to stdout
+    //2. Read up to '512' bytes from 'fd1' and store the read data into 'buffer', then display it to stdout
     while ((size = read (fd1, buffer, 512)) > 0)
     {
         //write to stdout, write 'size' bytes from 'buffer' which store the content to be written

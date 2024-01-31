@@ -15,11 +15,11 @@ int main(int argc, char *argv[]) {
         return 1;
     }
 
-    // Write to file
+    // Write to file fp using the string buf1
     fprintf (fp, "%s", buf1);
 
-    // Move file pointer to create a hole
-    if (fseek (fp, 12, SEEK_SET) == -1) 
+    // Move file pointer to create a hole using fseek() function
+    if (fseek (fp, 15, SEEK_SET) == -1) //fseek() and seek() are mostly the same
     {
         perror("fseek error");
         return 1;

@@ -14,7 +14,7 @@ int main() {
         exit(1);
     }
 
-    // Write content to the file
+    // Write content to the file, 3 spaces are just 3 spaces, and a tab is \t
     write (fd1, "1011   GM\tBuick\t2014\n1024   Ford\tLincoln\t2025", 45);
 
     close(fd1);  
