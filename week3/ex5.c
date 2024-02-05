@@ -1,31 +1,20 @@
-//ex5.c
+//ex5.c, run it as ./a.out ex5.txt
 #include <stdio.h>
-#include <stdlib.h>
 
-int main(int argc, char *argv[]) {
-	FILE *fp;
-	int c;
+int main(int argc, char *argv[]){ 
+	FILE *f = NULL;
+	char c;
 
-	if (argc == 1)
+	f=fopen(argv[1], "w");  
+
+	while((c=getchar()) != EOF)
 	{
-		fp = stdin; //keyboard
+		fputc(c, f);
+		//	fputc('h', f); // cast 'h' to 0x 00 23 (int)
 	}
-	else
-	{
-		if ((fp = fopen (argv[1], "r")) == NULL)
-		{
-			fprintf(stderr, "Error opening %s. No suck file exist\n", argv[1]);
-			exit(1);
-		}
-	}
-
-	while((c = getc(fp)) != EOF)
-	{
-		fputc(c, stdout); //Press Ctrl + D to return EOF if use 'stdin' for 'fp'
-	}
-	printf("\n");
-	//	fputc('h', f); // cast 'h' to 0x 00 23 (int)
-	//fclose(f);   //do I need this sentence or not? ctl+D   
-
-	exit(0);
+	
+	// fclose (f); //Do we need this?
 }
+
+
+//Question: what happens if we exit with a CTRL-C? File will not be save, press Ctrl + D instead
