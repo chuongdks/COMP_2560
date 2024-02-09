@@ -8,6 +8,9 @@ int main(int argc, char *argv[]) {
 
 	f=fopen(argv[1], "w");  
 
+	//
+	setvbuf (f, NULL, _IOLBF, 512);
+
 	while((c=getchar()) != EOF)
 	{
 		fputc(c, f);

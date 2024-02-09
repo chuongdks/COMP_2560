@@ -7,7 +7,7 @@ int glb = 100; // global variable
 
 int main(){
 	int pid;
-	int var = 88;  
+	int var = 88;  // local variable for testing
 	
 	printf("Before fork\n");  
 	pid = fork();
@@ -16,15 +16,15 @@ int main(){
 		perror("fork");  
 		exit(1);
 	}
-	
+	// 20 - 29 important
 	if(pid == 0){ //child  
 		
 		glb++; var++;
-		sleep(10);
+		//sleep(10);
 	//	sleep(15);
 	}
 	else{ // parent
-		sleep(2);
+		//sleep(2);
 	}
 	
 	printf("pid = %d, glob = %d, var = %d\n", getpid(), glb, var);

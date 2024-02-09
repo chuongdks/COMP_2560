@@ -16,18 +16,22 @@ int main(){
 		exit(1);
 	}
 	
-	if(pid == 0)// child
-		for( i =65; i < 85; i++){  
+	if(pid == 0) // child
+	{
+		for( i =65; i < 85; i++)
+		{  
 			c = i; 
 			write(fd, &c ,1);
 		}
+	}
 	else // parent 
-	   {    //sleep(5);
-		for( i = 0 ; i< 20; i++){ 
+	{    sleep(5); //The parent sleep for 5 secs, meanwhile the child write stuff, after that the parent write on it
+		for( i = 0 ; i< 20; i++)
+		{ 
 			 c = 64; // character @  
 			 write(fd, &c ,1);
 		}
-	   }
+	}
 		
 	return 0;
 }
