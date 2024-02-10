@@ -28,25 +28,36 @@ int main(int argc, char *argv[]) {
         fprintf(ifp, "\n");
     }
 
-    // Return the cursor to the original position
-    rewind(ifp);
+    // Find the size of the file
+    fseek (ifp, 0, SEEK_END);
+    long fileSize = ftell(ifp);
+    fseek (ifp, 0, SEEK_SET); // Return the cursor to the original position
 
-    // Read lines from input file and store them in a String array
-    char bufferReverse[100][512];
+    // Count the number of lines in the input file
+    long position = fileSize - 1;
     int newLineCounter = 0;
-    while (fgets (buffer, 512, ifp) != NULL)
+    while (position >= 0) 
     {
-        strcpy (bufferReverse[newLineCounter], buffer);
-        newLineCounter++;
+        fseek (ifp, position, SEEK_SET);
+        if (getc (ifp) == '\n') 
+        {
+            newLineCounter++;
+        }
+        position--;
     }
 
-    // Print lines in reverse order to output file
-    for (int i = newLineCounter - 1; i >= 0; i--)
+    // Read lines in reverse order and write them to the output file
+    for (int i = newLineCounter; i > 0; i--) 
     {
-        fputs (bufferReverse[i], ofp);
+        fseek (ifp, 0, SEEK_SET);
+        for (int j = 0; j < i; j++) 
+        {
+            fgets (buffer, 512, ifp);
+        }
+        fputs (buffer, ofp);
     }
 
-    // Close files
+    // Close files and free memory
     fclose(ifp);
     fclose(ofp);
 
