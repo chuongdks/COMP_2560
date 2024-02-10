@@ -16,7 +16,7 @@ int main() {
             return 1;
         }
 
-        fprintf(fp, "%d\n", i); // Writing number or something to the file
+        fprintf(fp, "This is file number: %d\n", i); // Writing number or something to the file
 
         printf("file%d ", i); // Print something after each file created, print the name to copy them easily
         fclose(fp); // Closing file

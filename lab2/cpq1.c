@@ -12,9 +12,9 @@ int main(int argc, char* argv[])
 	}
 	else
 	{
-		while(--argc > 0) // Minus argc at the beginning to exclude the program name. Loop through each cmd line arguments 
+		while(--argc > 0) // Minus argc at the beginning cuz argv start at index 0 
 		{
-			if ((fp = fopen(*++argv, "r")) == NULL) // argv[1] == *(argv+1)
+			if ((fp = fopen(*++argv, "r")) == NULL) // argv[1] == *(argv+1), plus one at the beginning to exclude the program name argument
 			{
 				printf("cat: can not open %s\n", *argv);
 				return 1;
