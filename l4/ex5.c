@@ -8,7 +8,7 @@ int main(int argc, char *argv[]) {
 
 	f=fopen(argv[1], "w");  
 
-	//
+	// Set the buffer to line buffering so that it will buffer every newline instead of fully buffer
 	setvbuf (f, NULL, _IOLBF, 512);
 
 	while((c=getchar()) != EOF)

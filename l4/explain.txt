@@ -1,0 +1,9 @@
+Explanation:
+a/ This program open a file to write content from the getchar() function, which use keyboard as its input.
+b/ 
+_ When you press Ctrl + D, the EOF character is pressed so the while loop condition is satisfy and do the fputc() function. 
+The program wait for EOF before writing to the file because by default, all open file stream is fully buffered.
+_ When you press Ctrl + C, it terminates the process during the while loop and EOF is not reached.
+c/
+_ So when you press Ctrl + C, the EOF never reach the loop, the buffer isnt written to the file and it is gone because no fputc() function to do it.
+
