@@ -40,12 +40,6 @@ void filecopy(FILE *ifp, FILE *ofp)
 	
     readSize = fread (buffer, 1, sizeof(buffer), ifp); // 'fread()' return size_t so store it in a variable
     fwrite (buffer, 1, readSize, ofp); // 'sizeof(buffer)' is too large for 'fwrite()', initialized garbage data, has to use data return by 'fread()'
-
-	// while ((readSize = fread(buffer, 1, sizeof(buffer), ifp)) > 0) 
-	// {
-    //     fwrite(buffer, 1, readSize, ofp);
-    //     fflush(ofp); 
-    // }
 }
 
 

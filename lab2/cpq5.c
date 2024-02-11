@@ -4,7 +4,7 @@
 int main(int argc, char *argv[]) {
     FILE *combinedFile;
     FILE *ifp;
-    char ch;
+    int c;
     int i;
 
     // Open the combined file for writing
@@ -24,9 +24,9 @@ int main(int argc, char *argv[]) {
         }
 
         // Read and write each character from the input file to the combined file
-        while ((ch = getc(ifp)) != EOF) 
+        while ((c = getc(ifp)) != EOF) 
         {
-            fputc(ch, combinedFile);
+            fputc (c, combinedFile);
         }
 
         // Close the input file

@@ -1,0 +1,43 @@
+Script started on 2024-02-11 16:26:11-05:00 [TERM="xterm-256color" TTY="/dev/pts/15" COLUMNS="196" LINES="15"]
+[?2004h]0;pham75@alpha: ~/Courses/COMP_2560/lab2[01;32mpham75@alpha[00m:[01;34m~/Courses/COMP_2560/lab2[00m$ cc cp1[Kq1.c -o test
+[?2004l[?2004h]0;pham75@alpha: ~/Courses/COMP_2560/lab2[01;32mpham75@alpha[00m:[01;34m~/Courses/COMP_2560/lab2[00m$ cc [K[K[Kls
+[?2004l[0m[01;31m'Assignment 2 attached files Feb 4, 2024 851 PM.zip'[0m   cpq1.c      cpq1t.log   cpq3.c      cpq4_2b.c   cpq5.c             filecomb    fileoutput   [01;32mtest[0m
+'Assignment 2.pdf'                                     cpq1s.txt   cpq2.c      cpq4_2a.c   cpq4.c      create_30_file.c   fileinput   mycat.c
+[?2004h]0;pham75@alpha: ~/Courses/COMP_2560/lab2[01;32mpham75@alpha[00m:[01;34m~/Courses/COMP_2560/lab2[00m$ cc [7mcreate_30_file.c[27mcreate_30_file.c -o test
+[?2004l[?2004h]0;pham75@alpha: ~/Courses/COMP_2560/lab2[01;32mpham75@alpha[00m:[01;34m~/Courses/COMP_2560/lab2[00m$ ./test
+[?2004lfile1 file2 file3 file4 file5 file6 file7 file8 file9 file10 file11 file12 file13 file14 file15 file16 file17 file18 file19 file20 file21 file22 file23 file24 file25 file26 file27 file28 file29 file30 [?2004h]0;pham75@alpha: ~/Courses/COMP_2560/lab2[01;32mpham75@alpha[00m:[01;34m~/Courses/COMP_2560/lab2[00m$ ./testcc create_30_file.c -o test[10Ppq1[C[C[C[C[C[C[C[C[C[Cpwd[Kcc cpq1.c -o test
+[?2004l[?2004h]0;pham75@alpha: ~/Courses/COMP_2560/lab2[01;32mpham75@alpha[00m:[01;34m~/Courses/COMP_2560/lab2[00m$ ./test [7mfile1 file2 file3 file4 file5 file6 file7 file8 file9 file10 file11 file12 file13 file14 file15 file16 file17 file18 file19 file20 file21 file22 file2[27m[7m3[27m[7m file24 file25 file26 file27 file28 file29 file30[27m[Afile1 file2 file3 file4 file5 file6 file7 file8 file9 file10 file11 file12 file13 file14 file15 file16 file17 file18 file19 file20 file21 file22 file23 file24 file25 file26 file27 file28 file29 file30
+[?2004lThis is file number: 1
+This is file number: 2
+This is file number: 3
+This is file number: 4
+This is file number: 5
+This is file number: 6
+This is file number: 7
+This is file number: 8
+This is file number: 9
+This is file number: 10
+This is file number: 11
+This is file number: 12
+This is file number: 13
+This is file number: 14
+This is file number: 15
+This is file number: 16
+This is file number: 17
+This is file number: 18
+This is file number: 19
+This is file number: 20
+This is file number: 21
+This is file number: 22
+This is file number: 23
+This is file number: 24
+This is file number: 25
+This is file number: 26
+This is file number: 27
+This is file number: 28
+This is file number: 29
+This is file number: 30
+[?2004h]0;pham75@alpha: ~/Courses/COMP_2560/lab2[01;32mpham75@alpha[00m:[01;34m~/Courses/COMP_2560/lab2[00m$ [?2004l
+exit
+
+Script done on 2024-02-11 16:27:25-05:00 [COMMAND_EXIT_CODE="0"]

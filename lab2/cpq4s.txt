@@ -1,0 +1,8 @@
+Script started on 2024-02-11 16:36:49-05:00 [TERM="xterm-256color" TTY="/dev/pts/15" COLUMNS="196" LINES="15"]
+[?2004h]0;pham75@alpha: ~/Courses/COMP_2560/lab2[01;32mpham75@alpha[00m:[01;34m~/Courses/COMP_2560/lab2[00m$ ./test[1Pclear./test file1 file2 file3 file4 file5 file6 file7 file8 file9 file10 file11 file12 file13 file14 file15 file16 file17 file18 file19 file20 file21 file22 file23 file24 file25 file26 file27 file28 file29 file30[Acc cpq3.c -o test[K
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1P[1@4
+[?2004l[?2004h]0;pham75@alpha: ~/Courses/COMP_2560/lab2[01;32mpham75@alpha[00m:[01;34m~/Courses/COMP_2560/lab2[00m$ ./test fileinput fileoutput
+[?2004l[?2004h]0;pham75@alpha: ~/Courses/COMP_2560/lab2[01;32mpham75@alpha[00m:[01;34m~/Courses/COMP_2560/lab2[00m$ [?2004l
+exit
+
+Script done on 2024-02-11 16:37:37-05:00 [COMMAND_EXIT_CODE="0"]

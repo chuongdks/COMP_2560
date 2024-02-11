@@ -5,7 +5,6 @@
 int main(int argc, char *argv[]) {
     FILE *ifp, *ofp;
     char buffer[512];
-    int read;
 
     // Open the input file using read and write
     if ((ifp = fopen (argv[1], "r+")) == NULL) 
