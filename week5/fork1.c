@@ -11,8 +11,9 @@ int main(int argc, char *argv[])
 	printf("Only one process so far\n");  
 
 	//Make 2 process, which will run first? Up to kernel to decide
+	printf("before fork, my pid is %d\n" , getpid());  
 	pid = fork(); //parent process will return positive value with 2 process
-	printf("pid: %d\n", pid);  
+	// printf("pid: %d\n", pid);  
 
 	if(pid == -1){  
 		perror("impossible to fork");  
@@ -21,13 +22,15 @@ int main(int argc, char *argv[])
 
 	if(pid > 0) 
 	{
-	    //sleep(2);
+	    sleep(2);
+		printf("pid: %d\n", pid); 
 		printf("I am the parent, pid=%d\n", getpid());  
 		
 	}
 	else if(pid == 0) 
 	{
 	    //sleep(2);
+		printf("pid: %d\n", pid); 
 		printf("I am the child, pid=%d\n", getpid());
 		//run this program a few more times to observe the output of the //
 		//sentence below

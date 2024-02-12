@@ -1,0 +1,25 @@
+q2.c Explanation:
+The fork() function will create a Child process that runs concurrently with the process that makes the fork() call (Parent process).
+After the Child is created, both parent and childs will execute the NEXT instruction line (this part is important)
+The explanation will be based on this output:
+
+before fork, my pid is 54905
+Hi, I am child. My pid is 54906, myppid=54905
+Hi, I am child. My pid is 54907, myppid=54905
+Hi, I am child. My pid is 54908, myppid=54905
+Hi, I am child. My pid is 54909, myppid=54906
+Hi, I am child. My pid is 54910, myppid=54906
+Hi, I am child. My pid is 54911, myppid=54909
+Hi, I am child. My pid is 54912, myppid=54907
+
+1. In the for loop that executed 3 times, the original parent process will execute the fork() 3 times, this will create 3 Child for the Orignal Parent
+1a. PID 905 will have 3 child: 906 (1st), 907 (2nd), 908 (3rd)
+
+2. The first child 906 will only execute 2 fork() loop after the parent, so it will create 2 childs (grand child of the parent): 909 (1st) and 910 (2nd)
+2a. The grandchild 909 will only execute 1 fork() loop after the child, it will create 1 grand-grand child: 911
+2b. The grand-grand child 910 is made in the final loop so it does not execute the fork() loop, no child is made
+
+3. The second child 907 will only execute 1 fork() loop after the parent, so it will create only 1 grand child: 912
+3a. The grand child 912 is made in the final loop so it does not execute the fork() loop, no child is made
+
+4. The child 908 is made in the final loop so it does not execute the fork() loop, no child is made

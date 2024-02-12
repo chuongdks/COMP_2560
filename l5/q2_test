@@ -1,0 +1,4 @@
+before fork, my pid is 115851
+Hi, I am child. My pid is 115854, myppid=115851
+Hi, I am child. My pid is 115852, myppid=115851
+Hi, I am child. My pid is 115853, myppid=115851

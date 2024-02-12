@@ -9,22 +9,27 @@ int main(){
 	int pid;
 	int var = 88;  // local variable for testing
 	
-	printf("Before fork\n");  
+	printf("before fork, my pid is %d\n" , getpid());  
+	printf("Original value of glb: %d\nOriginal value of var: %d\n", glb, var);  
 	pid = fork();
-
 	if( pid < 0 ){  
 		perror("fork");  
 		exit(1);
 	}
-	// 20 - 29 important
-	if(pid == 0){ //child  
-		
+
+	//child  
+	if(pid == 0)
+	{ 
 		glb++; var++;
-		//sleep(10);
-	//	sleep(15);
+		printf("I am the child, pid=%d\n", getpid());
+		printf("My parent's ID is , ppid=%d\n", getppid());
+		// sleep(10);
+		// sleep(15);
 	}
-	else{ // parent
-		//sleep(2);
+	else // parent
+	{ 
+		printf("I am the parent, pid=%d\n", getpid()); 
+		// sleep(2);
 	}
 	
 	printf("pid = %d, glob = %d, var = %d\n", getpid(), glb, var);
