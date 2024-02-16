@@ -11,12 +11,12 @@ int main(){
 		sleep(6);
 	
 		printf("My parent is %d\n", getppid());  
-		exit(2);
+		// exit(2);
 	}
 	// parent
 	printf("had a child...\n");
 
-	sleep(3);
+	// sleep(3);
 
 	exit(1);
 }

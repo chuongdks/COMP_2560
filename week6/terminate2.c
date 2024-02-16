@@ -11,17 +11,19 @@ int main() {
 	printf("before: mypid is %d\n", getpid());  
 
 	if ((newpid = fork()) == -1 )
+	{
 		perror("fork");  
-
-	else if (newpid == 0){
+	}
+	else if (newpid == 0)
+	{
 		printf("I am the child %d now sleeping...\n",getpid());  
-                sleep(10);
+        sleep(10);
 		exit(47);  //47 == 0x2F
 	}
 	else{
 		printf("I am the parent %d\n",getpid()); 
 		
-		int status;//s 0X2F 00   >>8   0X 00 2F
+		int status; //s 0X2F 00   >>8   0X 00 2F
 		int child_pid  = wait(&status);
 		
 		printf("My child %d has terminated\n",child_pid);
