@@ -1,26 +1,45 @@
-#include <unistd.h>
 #include <stdio.h>
-#include <sys/wait.h>
+#include <unistd.h>
 #include <stdlib.h>
+#include <sys/wait.h>
 
-int main(int argc, char* argv[]) {  int pid;
-printf("Before: process id %d\n",getpid());
+int main(){
+    int cpid1 = fork(); // this guy got fork() once by OG
+    int cpid2 = fork(); //This guy got fork() 2 times, one by the OG and one the OG's child
 
-if ((pid = fork())==0){
-printf("I am the child %d\n",getpid());  sleep(5);
-printf("Listing content of current directory...\n");
-char* arg_list[3] = { "ls","-l", (char *)0}; //"ls",
-// OR
-// char* arg_list[3];
-// arg_list[0] = "ls";
-// arg_list[1] = "-l";
-// arg_list[2] = 0;
+    if(cpid1 != 0 && cpid2 != 0) // The OG case passing through 2 fork()
+    {
+        int status;
+        printf("\nParent: I am going to wait for process with ID: %d\n", cpid2);
+            
+        // wait for any child to exit    
+        // int waitPID = wait(&status); // is similar to: waitpid(-1, &status, 0);
 
-execvp("/bin/ls",arg_list);
-}
-else{
-printf("I am the parent %d\n", getpid());  int status;
-int term_pid = wait(&status);
-printf("Child %d has listed the content of current directory\n", term_pid);  exit(1);
-}
+        // wait for cpid2 to exit, comment line above and uncomment line below to execute
+        int waitPID = waitpid (cpid2, &status, WUNTRACED);  // The third argument has lots of options, but usually just use '0' as default
+
+        printf("\nParent: Waited for child, return value of waitpid(): %d\n", waitPID);
+        printf("\nParent: Exit code of terminated child: %d\n", WEXITSTATUS(status));
+        exit(1);
+    }
+    else if (cpid1 == 0 && cpid2 != 0) //OG's child passing 2nd fork, making a new child
+    {
+        printf("\nChild1: My process ID: %d, my exit code is 1 and my parent ID is: %d\n", getpid(), getppid());
+        sleep(1);
+        exit(1);   
+    }
+    else if (cpid1 != 0 && cpid2 == 0) //OG's second child case
+    {
+        printf("\nChild2: My process ID: %d, my exit code is 2 and my parent ID is: %d\n", getpid(), getppid());
+        sleep(1);
+        exit(2);
+    }
+    else if (cpid1 == 0 && cpid2 == 0) // OG's first child getting a child case, has a former child badge as cpid1 == 0
+    {
+        printf("\nChild3: My process ID: %d, my exit code is 3 and my parent ID is: %d\n", getpid(), getppid());
+        sleep(1);
+        exit(3);
+    }
+
+    return 0;
 }

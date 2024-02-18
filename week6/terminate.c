@@ -11,20 +11,24 @@ int main() {
 	printf("before: mypid is %d\n", getpid());  
 
 	if ((newpid = fork()) == -1 )
+	{
 		perror("fork");  
-	else if (newpid == 0){  //child process
+	}
+	else if (newpid == 0)
+	{  //child process
 		printf("I am the child %d now sleeping...\n",getpid()); 
 		sleep(2);
 		exit(47);
-		printf("I am gone");
-	     }
-	else{  //parent process
+		printf("I am gone"); // The lines after exit() are not executed because exit() never returns
+	}
+	else
+	{  //parent process
 		printf("I am the parent %d\n",getpid());  
 
 		sleep(10);
 		printf("My child %d must be gone by now. I am leaving...\n",newpid);
-                exit(1);
-		printf("I am gone too\n");
+        exit(1);
+		printf("I am gone too\n"); // The lines after exit() are not executed because exit() never returns
 		
 	}
 }

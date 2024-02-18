@@ -3,7 +3,8 @@
 #include <stdio.h>
 #include <sys/wait.h>
 
-int fatal(char *s) {
+int fatal (char *s) 
+{
 	perror(s);
 	exit(1);
 }
@@ -14,8 +15,11 @@ int main()
 	int status, exit_status;
 
 	if ((pid = fork()) < 0)
+	{
 		fatal("fork failed");
-	if (pid == 0) 
+	}
+		
+	if (pid == 0) // Child Process
 	{
 		sleep(4);
 		exit(5); 
@@ -24,10 +28,10 @@ int main()
 	if ((pid = wait(&status)) == -1)
 	{
 		perror("wait failed");
-			exit(2);
+		exit(2);
 	}
 
-//use macros	
+	//use macros	
 	if (WIFEXITED(status))
 	{
 		exit_status = WEXITSTATUS(status);

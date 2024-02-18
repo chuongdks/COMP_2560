@@ -8,12 +8,13 @@ int main(int argc, char* argv[]) {
         int pid;
 	printf("Before: process id %d\n",getpid());
 
-	if ((pid = fork())==0){
+	if ((pid = fork())==0)
+	{
 		printf("I am the child %d\n",getpid());  
 		sleep(5);
 		printf("Listing content of current directory...\n");  
 		execl("/bin/ls","ls","-l", "-t", (char *)0);
-	        perror("sth is wrong.");
+	    perror("sth is wrong.");
 		
 	}
 	else{

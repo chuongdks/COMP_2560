@@ -1,33 +1,39 @@
- #include <sys/types.h>
- #include <unistd.h>
+#include <sys/types.h>
+#include <unistd.h>
 #include <stdio.h>
 #include<stdlib.h>
 
 
 static void charatatime(char *);
 
-int
-main(void)
+int main(void)
 {
-	pid_t	pid;
+	pid_t pid;
 
-	if ((pid = fork()) < 0) {
+	if ((pid = fork()) < 0) 
+	{
 		perror("fork error");
-	} else if (pid == 0) {
+	} 
+	else if (pid == 0) 
+	{
 		charatatime("output from child\n");
-	} else {
+	} 
+	else 
+	{
 		charatatime("output from parent\n");
 	}
 	exit(0);
 }
 
-static void
-charatatime(char *str)
+static void charatatime(char *str)
 {
-	char	*ptr;
-	int		c;
+	char* ptr;
+	int	c;
 
 	setbuf(stdout, NULL);			/* set unbuffered */
-	for (ptr = str; (c = *ptr++) != 0; )
-		putc(c, stdout);
+	for (ptr = str; (c = *ptr) != 0; ptr++)
+	{
+		putc(c, stdout); // say putc 3 times fast
+	}
 }
+		
