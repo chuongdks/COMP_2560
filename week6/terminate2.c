@@ -26,9 +26,13 @@ int main() {
 		
 		int status; 
 		
-		int child_pid = wait(&status);  // If the child is terminated normally. It will exit with number 47 (0x2F) put in the leftmost byte. 
+		int child_pid = wait(&status);  
+
+		// If the child is terminated normally. It will exit with number 47 (0x2F) put in the leftmost byte. 
 		// Gonna shift it ourself to show the child status. 0x2F00 >> 8 = 0x002F, it shift 8 bits to the right 0010 1111 0000 0000 >> 8 = 0010 1111
+
 		// Also wait() and waitpid() function return the child's pid, will use this fact for status2.c
+		// And the status variable will hold: 0x2F00 instead of 0x2F cuz as mentioned, it will exit with number 47 (0x2F) put in the leftmost byte. 
 
 		/* 
 		If the rightmost byte of status is zero, then the left most byte contains the status returned by the child: 

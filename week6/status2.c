@@ -27,13 +27,13 @@ int main()
 	}
 
 	// Wait pid usage here in this example	
-	while (waitpid(pid, &status, WNOHANG) == 0)
+	while (waitpid(pid, &status, WNOHANG) == 0) // NOHANG consant means that the parent process is not halted if no child is terminated, which means no child's pid returned
 	{
 		printf("still waiting...\n");
 		sleep(1);
 	}
 	
-	if (WIFEXITED(status))
+	if (WIFEXITED(status)) 
 	{
 		exit_status = WEXITSTATUS(status);
 		printf("Exit status from %d was %d\n", pid, exit_status);

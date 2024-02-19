@@ -34,6 +34,7 @@ int main()
 	
 	if (WIFEXITED(status)) // Return true if status was returned for a child that termminated normally, 
 	// Could execute this code next: WEXITSTATUS(status) to fetch the low order 8 bits of the argument that the child passed to exit()
+	// These MACRO replace what is done in the shifting bit parts of the program terminate2.c
 	{
 		exit_status = WEXITSTATUS(status);
 		printf("Exit status from %d was %d\n", pid, exit_status);

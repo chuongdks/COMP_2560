@@ -7,7 +7,8 @@ int main(int argc, char* argv[]) {
 	int pid;
 	printf("Before: process id %d\n",getpid());
 
-	if ((pid = fork())==0){
+	if ((pid = fork())==0)
+	{
 		printf("I am the child %d\n",getpid());  
 		sleep(5);
 		printf("Listing content of current directory...\n");
@@ -22,11 +23,14 @@ int main(int argc, char* argv[]) {
 		execv("/bin/ls",arg_list);
 		
 	}
-	else{
-		printf("I am the parent %d\n", getpid());  int status;
+	else
+	{
+		printf("I am the parent %d\n", getpid());  
+		
+		int status;
 		int term_pid = wait(&status);
 		//extract exit status using macros?
-		printf("Child %d has listed the content of current directory\n", 				term_pid);  
+		printf("Child %d has listed the content of current directory\n", term_pid);  
 		exit(1);
 	}
 
