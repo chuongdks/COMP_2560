@@ -26,14 +26,26 @@ int main()
 		exit(5); 
 	}
 
-	// Wait pid usage here in this example	
-	while (waitpid(pid, &status, WNOHANG) == 0) // NOHANG consant means that the parent process is not halted if no child is terminated, which means no child's pid returned
+	// wait(NULL); what am I doing here? Dont belong here cuz there will be no variable to check exit status
+	// First way to do wait, plz comment first way or second way
+	if ((pid = wait(&status)) == -1) // exit statis is stored in status address = 4
+	{
+		perror("wait failed");
+		exit(2);
+	}
+
+	// Second way to do wait, plz comment first way or second way
+	while (waitpid(pid, &status, WNOHANG) == 0) 
+	// exit statis is stored in status address = 4
+	// NOHANG consant means that the parent process is not halted if no child is terminated, which means no child's pid returned
 	{
 		printf("still waiting...\n");
 		sleep(1);
 	}
 	
-	if (WIFEXITED(status)) 
+	if (WIFEXITED(status)) // Return true if status was returned for a child that termminated normally, 
+	// Could execute this code next: WEXITSTATUS(status) to fetch the low order 8 bits of the argument that the child passed to exit()
+	// These MACRO replace what is done in the shifting bit parts of the program terminate2.c
 	{
 		exit_status = WEXITSTATUS(status);
 		printf("Exit status from %d was %d\n", pid, exit_status);

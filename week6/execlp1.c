@@ -12,7 +12,7 @@ int main(int argc, char* argv[]) {
 		printf ("I am the child %d\n",getpid());  
 		sleep(5);
 		printf ("Listing content of current directory...\n");  
-		execlp ("ls","ls","-l", "-t", "-a", (char *)NULL);
+		execlp ("ls","Come Get Some","-l", "-t", "-a", (char *)NULL);
 		// execlp ("execlp1", "execlp1", NULL);
 	}
 	else

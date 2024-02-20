@@ -19,6 +19,7 @@ int main() {
 		printf("I am the child %d now sleeping...\n", getpid());  
         sleep(20); 
 		exit(47);  //47 == 0x2F
+		printf("I am gone"); // The lines after exit() are not executed because exit() never returns
 	}
 	else
 	{
@@ -58,6 +59,9 @@ int main() {
 		int core = status & 0x80; // Do it for the core on the right most (MSB)
 
 		printf("Child status = %d\tSignal = %d\tCore = %d\n",child_status, signal, core);
+
+		exit(1);
+		printf("I am gone too\n"); // The lines after exit() are not executed because exit() never returns
 	}
 }
 

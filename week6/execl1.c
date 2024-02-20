@@ -12,8 +12,13 @@ int main(int argc, char* argv[]) {
 		printf ("I am the child %d\n",getpid());  
 		sleep(5);
 		printf ("Listing content of current directory...\n");  
-		execl ("/bin/ls","ls","-l", "-t", (char *)0);
+
+		// Do execl or execlp by comment these 2 line here or the 2 lines below 
+		execl ("/bin/ls","Poootis","-l", "-t", (char *)0);
 	    perror ("sth is wrong.");
+
+		execlp ("ls","Come Get Some","-l", "-t", "-a", (char *)NULL);
+		// execlp ("execlp1", "execlp1", NULL);
 	}
 	else
 	{

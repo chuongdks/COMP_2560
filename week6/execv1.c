@@ -13,20 +13,24 @@ int main(int argc, char* argv[]) {
 		sleep(5);
 		printf("Listing content of current directory...\n");
 		
-		char* arg_list[4] = {"ls", "-l", "-t", (char *)0};
+		char* arg_list[4] = {"The Argv[0] is just a name", "-l", "-t", (char *)0};
 		// OR
 		// char* arg_list[3];
 		// arg_list[0] = "ls";
 		// arg_list[1] = "-l";
 		// arg_list[2] = 0;
-
-		execv("/bin/ls",arg_list);
 		
+		// Do execv or execvp by comment these 2 line here or the 2 lines below 
+		execv("/bin/ls",arg_list);
+		perror("execv failed!");
+
+		execvp("ls",arg_list); //execvp("/usr/bin/ls", arg_list);
+		perror("execvp failed!");
 	}
 	else
 	{
 		printf("I am the parent %d\n", getpid());  
-		
+
 		int status;
 		int term_pid = wait(&status);
 		//extract exit status using macros?

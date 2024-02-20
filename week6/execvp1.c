@@ -13,7 +13,7 @@ int main(int argc, char* argv[]) {
 		sleep(5);
 		printf("Listing content of current directory...\n");
 
-		char* arg_list[4] = {"ls", "-l", "-t", (char *)0};
+		char* arg_list[4] = {"Put random bulshido in it", "-l", "-t", (char *)0};
 		// OR
 		// char* arg_list[3];
 		// arg_list[0] = "ls";
@@ -26,7 +26,7 @@ int main(int argc, char* argv[]) {
 	else
 	{
 		printf("I am the parent %d\n", getpid());  
-		
+
 		int status;
 		int term_pid = wait(&status);
 		//exit status , use macros?
