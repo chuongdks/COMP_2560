@@ -10,7 +10,7 @@ int copyfile(const char *f1, const char *f2)
 	//unsigned char c;
 	char c;
 
-	if ((inf = fopen(f1,"r")) == NULL)
+	if ((inf = fopen(f1, "r")) == NULL)
 	{
 		return (-1);
 	}
@@ -47,7 +47,6 @@ int copyfile(const char *f1, const char *f2)
 
 		putc(c, outf);
 	}
-
 
 	fclose(inf);
 	fclose(outf);

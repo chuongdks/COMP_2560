@@ -9,7 +9,7 @@
 	while(line[i] != '\0'){
 		putchar(line[i++]);
 		fflush(stdout);	// flush std output buffer  
-		sleep(1);
+		sleep(1); // This line prevent flush all at once  
 	}
 }
 
