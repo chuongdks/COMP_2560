@@ -1,6 +1,5 @@
 #include<stdio.h>
 
-
 int main(int argc, char* argv[])
 {
 	FILE *fp;
@@ -9,12 +8,11 @@ int main(int argc, char* argv[])
 
 	if (argc == 1) // Use Keyboard input if use 1 argument only
 	{
-		setvbuf(stdout, NULL, _IOLBF, BUFSIZ);
 		filecopy(stdin, stdout);
 	}
 	else
 	{
-		while(--argc >0) // Minus argc at the beginning cuz argv start at index 0
+		while(--argc > 0) // Minus argc at the beginning cuz argv start at index 0
 		{
 			if ((fp = fopen(*++argv, "r")) == NULL) // argv[1] == *(argv+1), plus one at the beginning to exclude the program name argument
 			{

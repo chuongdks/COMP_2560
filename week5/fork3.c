@@ -20,7 +20,7 @@ int main(){
 	
 	if(pid == 0) // child
 	{
-		for( i = 65; i < 85; i++)
+		for( i = 65; i < 85; i++) // ASCII A--> T
 		{  
 			c = i; 
 			write(fd, &c ,1);
@@ -31,7 +31,7 @@ int main(){
 		sleep(5); //The parent sleep for 5 secs, meanwhile the child write stuff, after that the parent write on it
 		for( i = 0 ; i < 20; i++)
 		{ 
-			c = 64; // character @  
+			c = 64; // character @ spam 20 times
 			write(fd, &c ,1);
 		}
 	}
