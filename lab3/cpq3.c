@@ -13,7 +13,7 @@ int main(int argc, char* argv[])
         exit(1);
     }
 
-    for (int i = 1; i < argc; i+=2) // Minus argc at the beginning cuz argv start at index 0
+    for (int i = 1; i < argc; i+=2) 
     {
         if((pid = fork()) == -1)
         {  
