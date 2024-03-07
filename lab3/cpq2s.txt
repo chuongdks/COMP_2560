@@ -1,0 +1,63 @@
+Script started on 2024-03-01 23:44:33-05:00 [TERM="xterm-256color" TTY="/dev/pts/15" COLUMNS="196" LINES="20"]
+[?2004h]0;pham75@charlie: ~/Courses/COMP_2560/lab3[01;32mpham75@charlie[00m:[01;34m~/Courses/COMP_2560/lab3[00m$ cc cpq2.c -o test
+[?2004l[?2004h]0;pham75@charlie: ~/Courses/COMP_2560/lab3[01;32mpham75@charlie[00m:[01;34m~/Courses/COMP_2560/lab3[00m$ [K]0;pham75@charlie: ~/Courses/COMP_2560/lab3[01;32mpham75@charlie[00m:[01;34m~/Courses/COMP_2560/lab3[00m$ ./test
+[?2004lEnter  an  arithmetic  statement,  e.g.,  34  + 132 >
+1 1 + 234512
+I am a child working for my parent
+No of arg: 3
+1 + 234512 = 234513
+Result above is correct
+Enter  an  arithmetic  statement,  e.g.,  34  + 132 >
+1   41232 - 2
+I am a child working for my parent
+No of arg: 3
+41232 - 2 = 41230
+Result above is correct
+Enter  an  arithmetic  statement,  e.g.,  34  + 132 >
+4 23 * 13
+I am a child working for my parent
+No of arg: 3
+23 * 13 = 299
+Result above is correct
+Enter  an  arithmetic  statement,  e.g.,  34  + 132 >
+23 * 0
+I am a child working for my parent
+No of arg: 3
+23 * 0 = 0
+Result above is correct
+Enter  an  arithmetic  statement,  e.g.,  34  + 132 >
+13/3
+I am a child working for my parent
+No of arg: 3
+13 / 3 = 4
+Result above is correct
+Enter  an  arithmetic  statement,  e.g.,  34  + 132 >
+13/0
+I am a child working for my parent
+No of arg: 3
+Division by zero
+Enter  an  arithmetic  statement,  e.g.,  34  + 132 >
+13 / 3 2
+I am a child working for my parent
+No of arg: 3
+13 / 2 = 6
+Result above is correct
+Enter  an  arithmetic  statement,  e.g.,  34  + 132 >
+dokwmokmd 0 wdwd
+I am a child working for my parent
+Wrong statement
+Enter  an  arithmetic  statement,  e.g.,  34  + 132 >
+1212 sdsd
+I am a child working for my parent
+Wrong statement
+Enter  an  arithmetic  statement,  e.g.,  34  + 132 >
+232 -   a 90
+I am a child working for my parent
+No of arg: 3
+Wrong operator
+Enter  an  arithmetic  statement,  e.g.,  34  + 132 >
+^C
+[?2004h]0;pham75@charlie: ~/Courses/COMP_2560/lab3[01;32mpham75@charlie[00m:[01;34m~/Courses/COMP_2560/lab3[00m$ [?2004l
+exit
+
+Script done on 2024-03-01 23:52:24-05:00 [COMMAND_EXIT_CODE="130"]

@@ -1,0 +1,11 @@
+Script started on 2024-03-01 23:42:26-05:00 [TERM="xterm-256color" TTY="/dev/pts/15" COLUMNS="196" LINES="20"]
+[?2004h]0;pham75@charlie: ~/Courses/COMP_2560/lab3[01;32mpham75@charlie[00m:[01;34m~/Courses/COMP_2560/lab3[00m$ pwdưdcd lab3Courses/COMP_2560lab3[K[4Ppưdwd[Kcpq[Kq1.c -o test[C[1@c[C[1@c[1@ 
+[?2004l[?2004h]0;pham75@charlie: ~/Courses/COMP_2560/lab3[01;32mpham75@charlie[00m:[01;34m~/Courses/COMP_2560/lab3[00m$ ./test
+[?2004lbefore: mypid is 274978
+I am the parent 274978
+I am the child 274979 now sleeping...
+Exit status from 274979 was 6
+[?2004h]0;pham75@charlie: ~/Courses/COMP_2560/lab3[01;32mpham75@charlie[00m:[01;34m~/Courses/COMP_2560/lab3[00m$ [?2004l
+exit
+
+Script done on 2024-03-01 23:43:52-05:00 [COMMAND_EXIT_CODE="0"]

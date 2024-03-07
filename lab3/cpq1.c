@@ -19,8 +19,9 @@ int main() {
 	else if (newpid == 0)
 	{
 		printf("I am the child %d now sleeping...\n",getpid());  
-		sleep(5);
+		sleep(2);
 		abort();  //terminate abnormally, this program is almost the same as terminate2.c except this part it use abort() instead of exit()
+		exit(23);
 	}
 	else if (newpid > 0)
 	{

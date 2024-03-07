@@ -1,0 +1,83 @@
+Script started on 2024-03-01 23:52:31-05:00 [TERM="xterm-256color" TTY="/dev/pts/15" COLUMNS="196" LINES="17"]
+[?2004h]0;pham75@charlie: ~/Courses/COMP_2560/lab3[01;32mpham75@charlie[00m:[01;34m~/Courses/COMP_2560/lab3[00m$ cpq3[K[K[K[Kcc cpq3.c -o test
+[?2004l[?2004h]0;pham75@charlie: ~/Courses/COMP_2560/lab3[01;32mpham75@charlie[00m:[01;34m~/Courses/COMP_2560/lab3[00m$ ./test cat readme ls[K[Kuname -a[Km -[Kls[K[Kps
+[?2004l
+This cmd parent process pid is: 278005
+TEstiong
+Read me plz
+123
+124
+TEstiong
+Hello
+Exit status from the child process: 279398 was 0
+
+This cmd parent process pid is: 278005
+x86_64
+Exit status from the child process: 279399 was 0
+
+This cmd parent process pid is: 278005
+    PID TTY          TIME CMD
+ 278005 pts/16   00:00:00 bash
+ 279397 pts/16   00:00:00 test
+ 279400 pts/16   00:00:00 ps
+Exit status from the child process: 279400 was 0
+[?2004h]0;pham75@charlie: ~/Courses/COMP_2560/lab3[01;32mpham75@charlie[00m:[01;34m~/Courses/COMP_2560/lab3[00m$ [K]0;pham75@charlie: ~/Courses/COMP_2560/lab3[01;32mpham75@charlie[00m:[01;34m~/Courses/COMP_2560/lab3[00m$ ./test cat readme uname -m ps[K[Kls -t
+[?2004l
+This cmd parent process pid is: 278005
+TEstiong
+Read me plz
+123
+124
+TEstiong
+Hello
+Exit status from the child process: 279760 was 0
+
+This cmd parent process pid is: 278005
+x86_64
+Exit status from the child process: 279761 was 0
+
+This cmd parent process pid is: 278005
+ cpq3.c   test	 cpq3s.txt   cpq3t.log	 cpq2t.log   cpq2s.txt	 cpq2.c   cpq1s.txt   cpq1t.log   cpq1.c   readme   test.c  'Assignment 3-2024W.pdf'
+Exit status from the child process: 279762 was 0
+[?2004h]0;pham75@charlie: ~/Courses/COMP_2560/lab3[01;32mpham75@charlie[00m:[01;34m~/Courses/COMP_2560/lab3[00m$ ls -t
+[?2004l cpq3.c   [0m[01;32mtest[0m   cpq3s.txt   cpq3t.log   cpq2t.log   cpq2s.txt   cpq2.c   cpq1s.txt   cpq1t.log   cpq1.c   readme   test.c  'Assignment 3-2024W.pdf'
+[?2004h]0;pham75@charlie: ~/Courses/COMP_2560/lab3[01;32mpham75@charlie[00m:[01;34m~/Courses/COMP_2560/lab3[00m$ ls -t[27@./test cat readme uname -m [C[C[C[C[C
+[?2004l
+This cmd parent process pid is: 278005
+TEstiong
+Read me plz
+123
+124
+TEstiong
+Hello
+Exit status from the child process: 279851 was 0
+
+This cmd parent process pid is: 278005
+x86_64
+Exit status from the child process: 279852 was 0
+
+This cmd parent process pid is: 278005
+ cpq3.c   test	 cpq3s.txt   cpq3t.log	 cpq2t.log   cpq2s.txt	 cpq2.c   cpq1s.txt   cpq1t.log   cpq1.c   readme   test.c  'Assignment 3-2024W.pdf'
+Exit status from the child process: 279853 was 0
+[?2004h]0;pham75@charlie: ~/Courses/COMP_2560/lab3[01;32mpham75@charlie[00m:[01;34m~/Courses/COMP_2560/lab3[00m$ ./test cat readme uname -m ls -t
+[?2004l
+This cmd parent process pid is: 278005
+TEstiong
+Read me plz
+123
+124
+TEstiong
+Hello
+Exit status from the child process: 280033 was 0
+
+This cmd parent process pid is: 278005
+x86_64
+Exit status from the child process: 280034 was 0
+
+This cmd parent process pid is: 278005
+ cpq3.c   test	 cpq3s.txt   cpq3t.log	 cpq2t.log   cpq2s.txt	 cpq2.c   cpq1s.txt   cpq1t.log   cpq1.c   readme   test.c  'Assignment 3-2024W.pdf'
+Exit status from the child process: 280035 was 0
+[?2004h]0;pham75@charlie: ~/Courses/COMP_2560/lab3[01;32mpham75@charlie[00m:[01;34m~/Courses/COMP_2560/lab3[00m$ [?2004l
+exit
+
+Script done on 2024-03-01 23:59:13-05:00 [COMMAND_EXIT_CODE="0"]

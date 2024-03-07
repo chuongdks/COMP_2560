@@ -6,15 +6,15 @@
 
 void childFunction(char *line)
 {
-    // 
+    // Print I am a child line
     printf("I am a child working for my parent\n");
 
-    // s
-    int n1, n2, result;
-    char op;
-    char output[20] = ""; 
+    // Necessary Variable 
+    int n1, n2, result; // arithamtic operation
+    char op; // the operator
+    char output[20] = ""; // String to store the arithmatic output
     
-    //
+    // If the number of variable filled is not 3, return Wrong Statement case
     int argc = sscanf(line, "%d %c %d", &n1, &op, &n2);
     if (argc != 3) 
     {
@@ -22,7 +22,7 @@ void childFunction(char *line)
         exit(50);
     }
 
-    //
+    // Switch case to do the calculaator
     switch (op) 
     {
         case '+':
@@ -47,7 +47,7 @@ void childFunction(char *line)
             exit(200);
     }
     
-    //
+    //Store the Formated Output in the String output
     sprintf(output, "%d %c %d = %d", n1, op, n2, result);
     printf("%s\n", output);
     exit(0);
@@ -62,25 +62,26 @@ int main(int argc, char *argv[])
         printf("Enter  an  arithmetic  statement,  e.g.,  34  + 132 >\n");
         read (0, buffer, 512);
 
-        //
+        // If process failed to fork
         if((pid = fork()) == -1)
         {  
             perror("impossible to fork");  
             exit(1);
         }
         
-        //
+        // Parent process
         if (pid > 0) 
         {
             // printf("I am the parent, pid=%d\n", getpid());  
 
-            if (wait(&status) == -1) // exit statis is stored in status address = 4
+            // Wait for the child to terminate and take the exit status
+            if (wait(&status) == -1)
             {
                 perror("wait failed");
                 exit(2);
             }
             
-            //
+            // If the child process terminate successfully, use the MACRO
             if (WIFEXITED(status)) 
             {
                 exit_status = WEXITSTATUS(status);
@@ -104,10 +105,10 @@ int main(int argc, char *argv[])
                 // printf("Exit status from %d was %d\n", pid, exit_status);
             }
         }
-        else if(pid == 0) 
+        // Child process
+        else if (pid == 0) 
         {
-            // printf("I am the child, pid=%d\n", getpid());
-            // printf("My parent's ID is , ppid=%d\n", getppid());
+            // Do the calculator function
             childFunction(buffer);
         }
     }

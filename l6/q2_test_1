@@ -1,0 +1,5 @@
+before fork, my pid is 206015
+Hi, I am the Parent. My pid is 206015, myppid=174938. Loop number: 3
+Hi, I am the Parent. My pid is 206015, myppid=174938. Loop number: 2
+Hi, I am the Parent. My pid is 206015, myppid=174938. Loop number: 1
+Parent Process Closing the file now
