@@ -27,8 +27,9 @@ int main(){
 		while (inf == 0) // Trapped the child in an infinite loop
 		{
 			sleep(2);
-			inf++;
+			//inf++;
 		}
+		
 		exit(1);
 	}
 	else // Parent process

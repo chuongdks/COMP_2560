@@ -1,0 +1,47 @@
+Script started on 2024-03-11 11:47:09-04:00 [TERM="xterm-256color" TTY="/dev/pts/3" COLUMNS="189" LINES="18"]
+[?2004h]0;pham75@charlie: ~/Courses/COMP_2560/l7[01;32mpham75@charlie[00m:[01;34m~/Courses/COMP_2560/l7[00m$ cc cpq3.c 0o t[K[K[K[K-o test
+[?2004l[?2004h]0;pham75@charlie: ~/Courses/COMP_2560/l7[01;32mpham75@charlie[00m:[01;34m~/Courses/COMP_2560/l7[00m$ ./test
+[?2004lCounter: 1
+Counter: 2
+Counter: 3
+Counter: 4
+Counter: 5
+Counter: 6
+Counter: 7
+Counter: 8
+Counter: 9
+Counter: 10
+[?2004h]0;pham75@charlie: ~/Courses/COMP_2560/l7[01;32mpham75@charlie[00m:[01;34m~/Courses/COMP_2560/l7[00m$ cat cpq3.c
+[?2004l#include <stdio.h>
+#include <stdlib.h>
+#include <unistd.h>
+#include <signal.h>
+
+int main(int argc, char *argv[]){  
+	int pid, increase = 1;
+
+	if((pid=fork()) != 0) //parent  
+	{
+		sleep(5);
+		kill(pid, SIGSTOP);  // send the child SIGSTOP to stop the child process
+		sleep(5);
+		kill(pid, SIGCONT);  // send the child SIGCONT to continue the child process
+		sleep(5);
+		kill(pid, SIGINT);  // send the child SIGINT to terminate the child process
+	}
+	else //child code
+	{
+		while(1)
+		{
+			printf("Counter: %d\n", increase++);
+			sleep(1);
+		}
+	}
+}
+
+
+
+[?2004h]0;pham75@charlie: ~/Courses/COMP_2560/l7[01;32mpham75@charlie[00m:[01;34m~/Courses/COMP_2560/l7[00m$ [?2004l
+exit
+
+Script done on 2024-03-11 11:47:40-04:00 [COMMAND_EXIT_CODE="0"]

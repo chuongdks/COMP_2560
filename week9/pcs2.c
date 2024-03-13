@@ -18,8 +18,8 @@ int main(int argc, char *argv[]){
 		while(1)
 		{
 			printf("Parent is running\n");  
-			kill(pid, SIGUSR1);  // send the child user-defined signal 1
 			signal(SIGUSR1, action);  // when the SIGNAL happened to the parent (sent by Child using kill()), do action()
+			kill(pid, SIGUSR1);  // send the child user-defined signal 1
 			pause(); // pause until received signal 
 		}
 	}

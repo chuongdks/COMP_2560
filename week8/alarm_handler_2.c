@@ -13,7 +13,8 @@ void alarm_handler(int dummy)
 
 int main(int argc, char *argv[]){
 
-	signal(14, alarm_handler);//install handler  alarm(3);	// for first time
+	signal(14, alarm_handler); // install handler  
+	alarm(3); // for first time
 
 	while(1)
 	{
