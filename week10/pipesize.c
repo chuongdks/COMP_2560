@@ -1,4 +1,5 @@
 //*********************************
+// Dont need to learnt carefully cuz not explain some syntax in class
 #include <unistd.h>
 #include <stdio.h>
 #include <stdlib.h>

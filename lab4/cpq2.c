@@ -13,12 +13,25 @@ int main(int argc, char *argv[]){
 	int pid,i;
 
 	signal(2, SIGINT_Handler);	//ignore CTRL-C (SIGINT) and store the old signal handler of that specific signal
-	signal(20, SIG_IGN); // ignore CTRL-Z (SIGTSTP)   ; kill -l   24-->20
+	signal(20, SIG_IGN); // ignore CTRL-Z (SIGTSTP) 
 
 	pid=fork();
-    if (pid == 0) // CHild
+    if (pid == 0) // Child
     {
-        printf("I am the child\n");  
+        // Pause the child until kill signal received
+        pause();
+        
+        // During this time, the child have a handler for Ctrl + C and Ignore Ctrl + Z
+        int inf = 8;
+        while (inf > 0)
+        {
+            printf("I am not vulnerable to Ctrl + C\n");
+            sleep(1);
+            inf--;
+        }
+        
+        // After this line, the child return to default handler for Ctrl + C and still Ignore Ctrl + Z
+        printf("I am the child. Vulnerable to Ctrl + C\n");  
         execlp("./donothing","donothing",NULL);
     }
     else // Parent
@@ -27,7 +40,7 @@ int main(int argc, char *argv[]){
         // send a signal to child
         kill(pid, SIGINT);  
         kill(pid, SIGTSTP); 
-        wait(NULL); // Stopped the parent procecss from exiting
+        wait(NULL); // Stopped the parent procecss from exiting so that child process doesnt become orphan
     }
 }
 

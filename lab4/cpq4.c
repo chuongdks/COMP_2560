@@ -8,25 +8,19 @@
 void signal_handler(int signum)
 {
 	printf("Signal %d: %s\n", signum, strsignal(signum));
-	printf("Test\n");
 }
 
 int main(int argc, char *argv[]){  
 	int pid;
 
-	if((pid=fork()) > 0) //parent process code
-	{ 
-		sleep(1);
-		kill(pid, SIGINT);  // send the child SIGINT to terminate the child process
-		kill(pid, SIGQUIT);  // send the child SIGINT to terminate the child process
-		wait(NULL);
-	}
-	else //child process code
-	{ 
-		signal(SIGINT, signal_handler);   
-		signal(SIGQUIT, signal_handler);  
-		pause(); // Child PAUSE will be wake up by the kill()
-	}
+	signal(SIGINT, signal_handler);	// Ctrl + C
+	signal(SIGQUIT, signal_handler); // Ctrl + \ 
+
+    while (1)
+    {
+        sleep(1);
+    }
+
 	return 0;
 }
 
