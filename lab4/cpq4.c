@@ -3,6 +3,7 @@
 #include <unistd.h>
 #include <signal.h>
 #include <string.h>
+#include <sys/wait.h>
 
 void signal_handler(int signum)
 {
@@ -18,6 +19,7 @@ int main(int argc, char *argv[]){
 		sleep(1);
 		kill(pid, SIGINT);  // send the child SIGINT to terminate the child process
 		kill(pid, SIGQUIT);  // send the child SIGINT to terminate the child process
+		wait(NULL);
 	}
 	else //child process code
 	{ 

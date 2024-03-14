@@ -24,10 +24,10 @@ int main(int argc, char *argv[]){
     else // Parent
     {
         printf("I am in parent process. Letting my child execute the infinite donothing program\n");
-        wait(NULL); // Stopped the parent procecss from exiting
         // send a signal to child
         kill(pid, SIGINT);  
         kill(pid, SIGTSTP); 
+        wait(NULL); // Stopped the parent procecss from exiting
     }
 }
 
