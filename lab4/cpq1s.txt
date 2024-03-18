@@ -1,0 +1,17 @@
+Script started on 2024-03-14 20:21:49-04:00 [TERM="xterm-256color" TTY="/dev/pts/28" COLUMNS="178" LINES="18"]
+[?2004h]0;pham75@bravo: ~/Courses/COMP_2560[01;32mpham75@bravo[00m:[01;34m~/Courses/COMP_2560[00m$ cc cpq1.c -o test
+[?2004l[01m[Kcc:[m[K [01;31m[Kerror: [m[Kcpq1.c: No such file or directory
+[01m[Kcc:[m[K [01;31m[Kfatal error: [m[Kno input files
+compilation terminated.
+[?2004h]0;pham75@bravo: ~/Courses/COMP_2560[01;32mpham75@bravo[00m:[01;34m~/Courses/COMP_2560[00m$ cd lab4
+[?2004l[?2004h]0;pham75@bravo: ~/Courses/COMP_2560/lab4[01;32mpham75@bravo[00m:[01;34m~/Courses/COMP_2560/lab4[00m$ cd lab4c cpq1.c -o test
+[?2004l[?2004h]0;pham75@bravo: ~/Courses/COMP_2560/lab4[01;32mpham75@bravo[00m:[01;34m~/Courses/COMP_2560/lab4[00m$ [K]0;pham75@bravo: ~/Courses/COMP_2560/lab4[01;32mpham75@bravo[00m:[01;34m~/Courses/COMP_2560/lab4[00m$ ./test
+[?2004l1st child created. PID = 258101
+Becoming Orphan
+2nd child created. PID = 258102
+I will be waited by my parent...
+Parent waited for pid = 258102 successfully[?2004h]0;pham75@bravo: ~/Courses/COMP_2560/lab4[01;32mpham75@bravo[00m:[01;34m~/Courses/COMP_2560/lab4[00m$ 1st child PID = 258101, the parent is: 1
+[?2004l
+exit
+
+Script done on 2024-03-14 20:22:10-04:00 [COMMAND_EXIT_CODE="1"]

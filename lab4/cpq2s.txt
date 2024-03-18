@@ -1,0 +1,47 @@
+Script started on 2024-03-14 20:26:18-04:00 [TERM="xterm-256color" TTY="/dev/pts/28" COLUMNS="200" LINES="18"]
+[?2004h]0;pham75@bravo: ~/Courses/COMP_2560[01;32mpham75@bravo[00m:[01;34m~/Courses/COMP_2560[00m$ cc cpq2.c -o test
+[?2004l[01m[Kcc:[m[K [01;31m[Kerror: [m[Kcpq2.c: No such file or directory
+[01m[Kcc:[m[K [01;31m[Kfatal error: [m[Kno input files
+compilation terminated.
+[?2004h]0;pham75@bravo: ~/Courses/COMP_2560[01;32mpham75@bravo[00m:[01;34m~/Courses/COMP_2560[00m$ cd lab4
+[?2004l[?2004h]0;pham75@bravo: ~/Courses/COMP_2560/lab4[01;32mpham75@bravo[00m:[01;34m~/Courses/COMP_2560/lab4[00m$ cd lab4c cpq2.c -o test
+[?2004l[?2004h]0;pham75@bravo: ~/Courses/COMP_2560/lab4[01;32mpham75@bravo[00m:[01;34m~/Courses/COMP_2560/lab4[00m$ ./test
+[?2004lI am in parent process. Letting my child execute the infinite donothing program
+Ctrl + C is Pressed!
+Pressing Ctrl + C does not terminate
+Pressing Ctrl + C does not terminate
+^CCtrl + C is Pressed!
+Pressing Ctrl + C does not terminate
+Ctrl + C is Pressed!
+^CCtrl + C is Pressed!
+Pressing Ctrl + C does not terminate
+Ctrl + C is Pressed!
+Pressing Ctrl + C does not terminate
+^CCtrl + C is Pressed!
+Ctrl + C is Pressed!
+Pressing Ctrl + C does not terminate
+^ZPressing Ctrl + C does not terminate
+^ZPressing Ctrl + C does not terminate
+^CCtrl + C is Pressed!
+Pressing Ctrl + C does not terminate
+Ctrl + C is Pressed!
+Pressing Ctrl + C does not terminate
+I am the child. Pressing Ctrl + C terminate now
+ Do nothing program.
+ Do nothing program.
+ Do nothing program.
+ Do nothing program.
+ Do nothing program.
+ Do nothing program.
+ Do nothing program.
+ Do nothing program.
+^Z Do nothing program.
+^Z Do nothing program.
+^Z Do nothing program.
+^Z Do nothing program.
+ Do nothing program.
+^CCtrl + C is Pressed!
+[?2004h]0;pham75@bravo: ~/Courses/COMP_2560/lab4[01;32mpham75@bravo[00m:[01;34m~/Courses/COMP_2560/lab4[00m$ [?2004l
+exit
+
+Script done on 2024-03-14 20:27:02-04:00 [COMMAND_EXIT_CODE="0"]

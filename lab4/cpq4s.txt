@@ -1,0 +1,37 @@
+Script started on 2024-03-14 20:31:31-04:00 [TERM="xterm-256color" TTY="/dev/pts/33" COLUMNS="200" LINES="18"]
+[?2004h]0;pham75@bravo: ~/Courses/COMP_2560/lab4[01;32mpham75@bravo[00m:[01;34m~/Courses/COMP_2560/lab4[00m$ cc cpq4.c -o test
+[?2004l[?2004h]0;pham75@bravo: ~/Courses/COMP_2560/lab4[01;32mpham75@bravo[00m:[01;34m~/Courses/COMP_2560/lab4[00m$ ./test
+[?2004l^CSignal 2: Interrupt
+^CSignal 2: Interrupt
+^\Signal 3: Quit
+^\Signal 3: Quit
+^CSignal 2: Interrupt
+^\Signal 3: Quit
+^CSignal 2: Interrupt
+\^\Signal 3: Quit
+^Z
+[1]+  Stopped                 ./test
+[?2004h]0;pham75@bravo: ~/Courses/COMP_2560/lab4[01;32mpham75@bravo[00m:[01;34m~/Courses/COMP_2560/lab4[00m$ [?2004l
+exit
+There are stopped jobs.
+[?2004h]0;pham75@bravo: ~/Courses/COMP_2560/lab4[01;32mpham75@bravo[00m:[01;34m~/Courses/COMP_2560/lab4[00m$ clear
+[?2004l[H[2J[3J[?2004h]0;pham75@bravo: ~/Courses/COMP_2560/lab4[01;32mpham75@bravo[00m:[01;34m~/Courses/COMP_2560/lab4[00m$ [?2004l
+exit
+There are stopped jobs.
+[?2004h]0;pham75@bravo: ~/Courses/COMP_2560/lab4[01;32mpham75@bravo[00m:[01;34m~/Courses/COMP_2560/lab4[00m$ ps -a
+[?2004l    PID TTY          TIME CMD
+ 264546 pts/33   00:00:00 script
+ 264657 pts/26   00:00:00 test
+ 265393 pts/26   00:00:00 ps
+[?2004h]0;pham75@bravo: ~/Courses/COMP_2560/lab4[01;32mpham75@bravo[00m:[01;34m~/Courses/COMP_2560/lab4[00m$ kill [7m264657[27m264657
+[?2004l[?2004h]0;pham75@bravo: ~/Courses/COMP_2560/lab4[01;32mpham75@bravo[00m:[01;34m~/Courses/COMP_2560/lab4[00m$ [?2004l
+exit
+There are stopped jobs.
+[?2004h]0;pham75@bravo: ~/Courses/COMP_2560/lab4[01;32mpham75@bravo[00m:[01;34m~/Courses/COMP_2560/lab4[00m$ fg
+[?2004l./test
+Terminated
+[?2004h]0;pham75@bravo: ~/Courses/COMP_2560/lab4[01;32mpham75@bravo[00m:[01;34m~/Courses/COMP_2560/lab4[00m$ ^C[?2004l[?2004h[?2004l
+[?2004h]0;pham75@bravo: ~/Courses/COMP_2560/lab4[01;32mpham75@bravo[00m:[01;34m~/Courses/COMP_2560/lab4[00m$ [?2004l
+exit
+
+Script done on 2024-03-14 20:32:39-04:00 [COMMAND_EXIT_CODE="143"]

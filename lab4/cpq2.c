@@ -22,16 +22,16 @@ int main(int argc, char *argv[]){
         pause();
         
         // During this time, the child have a handler for Ctrl + C and Ignore Ctrl + Z
-        int inf = 8;
+        int inf = 10;
         while (inf > 0)
         {
-            printf("I am not vulnerable to Ctrl + C\n");
+            printf("Pressing Ctrl + C does not terminate\n");
             sleep(1);
             inf--;
         }
         
         // After this line, the child return to default handler for Ctrl + C and still Ignore Ctrl + Z
-        printf("I am the child. Vulnerable to Ctrl + C\n");  
+        printf("I am the child. Pressing Ctrl + C terminate now\n");  
         execlp("./donothing","donothing",NULL);
     }
     else // Parent

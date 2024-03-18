@@ -1,0 +1,16 @@
+Script started on 2024-03-14 20:28:16-04:00 [TERM="xterm-256color" TTY="/dev/pts/32" COLUMNS="200" LINES="18"]
+[?2004h]0;pham75@bravo: ~/Courses/COMP_2560/lab4[01;32mpham75@bravo[00m:[01;34m~/Courses/COMP_2560/lab4[00m$ cc cpq3.c -o test
+[?2004l[?2004h]0;pham75@bravo: ~/Courses/COMP_2560/lab4[01;32mpham75@bravo[00m:[01;34m~/Courses/COMP_2560/lab4[00m$ ./test 5
+[?2004lAlarm application running
+Watiing for alarm to go off
+DING!!!
+Done
+[?2004h]0;pham75@bravo: ~/Courses/COMP_2560/lab4[01;32mpham75@bravo[00m:[01;34m~/Courses/COMP_2560/lab4[00m$ ./test 5[K2
+[?2004lAlarm application running
+Watiing for alarm to go off
+DING!!!
+Done
+[?2004h]0;pham75@bravo: ~/Courses/COMP_2560/lab4[01;32mpham75@bravo[00m:[01;34m~/Courses/COMP_2560/lab4[00m$ [K]0;pham75@bravo: ~/Courses/COMP_2560/lab4[01;32mpham75@bravo[00m:[01;34m~/Courses/COMP_2560/lab4[00m$ [?2004l
+exit
+
+Script done on 2024-03-14 20:30:05-04:00 [COMMAND_EXIT_CODE="0"]
