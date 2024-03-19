@@ -21,6 +21,9 @@ int main() {
 	write(p[1], msg1, MSGSIZE);
 	write(p[1], msg2, MSGSIZE);
 	write(p[1], msg3, MSGSIZE);
+	sleep(5);
+	write(p[1], msg2, MSGSIZE);
+	write(p[1], msg1, MSGSIZE);
 
 	for (j = 0; j < 5; j++) //change 3 to 5
 	{  

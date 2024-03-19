@@ -17,19 +17,23 @@ int main(int argc, char *argv[]){
 	pid=fork();
     if(pid==0)
     {
+        pause();
         printf("I am the child\n");  
-        execlp("./donothing.c", "donothing.c", (char *)NULL);
+        execlp("./donothing","donothing",NULL);
+        sleep(1);
+        kill(pid, SIGINT);  
+        kill(pid, SIGTSTP); 
     }
     else 
     {
-        for(int i = 1; i <= 15; i++)
+        for(int i = 1; i <= 5; i++)
         //while(1)
         {
             printf("I am in parent process.\n");
             // send a signal to child
-            kill(pid, SIGINT);        
+            kill(pid, SIGINT);  
             kill(pid, SIGTSTP); 
-            sleep(1);
+            pause();
         }
     }
 }
