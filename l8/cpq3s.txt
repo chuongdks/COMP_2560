@@ -1,0 +1,9 @@
+Script started on 2024-03-19 17:45:42-04:00 [TERM="xterm-256color" TTY="/dev/pts/10" COLUMNS="181" LINES="18"]
+[?2004h]0;pham75@charlie: ~/Courses/COMP_2560/l8[01;32mpham75@charlie[00m:[01;34m~/Courses/COMP_2560/l8[00m$ cc cpq3.c -o test
+[?2004l[?2004h]0;pham75@charlie: ~/Courses/COMP_2560/l8[01;32mpham75@charlie[00m:[01;34m~/Courses/COMP_2560/l8[00m$ ./test
+[?2004lI have requested to read 32 bytes, but only  16  bytes in the pipe so far.
+This is the  16  bytes I read: hello, world #1
+[?2004h]0;pham75@charlie: ~/Courses/COMP_2560/l8[01;32mpham75@charlie[00m:[01;34m~/Courses/COMP_2560/l8[00m$ [?2004l
+exit
+
+Script done on 2024-03-19 17:46:18-04:00 [COMMAND_EXIT_CODE="0"]

@@ -1,0 +1,5 @@
+In the file pipe1.c, the main program write to the pipe 3 times in the order of msg1 to msg3
+We use the for loop to make the read-end read what is in the pipe 3 times
+Now change the for loop to make the read-end read it 4 times 
+According to Rule #2, the process reads from an empty pipe whose write-end still open, will sleep until receive input from the write-end again
+So the program will sleep forever since there are no write() line left

@@ -21,10 +21,10 @@ int main() {
         // write(p[1], msg2, MSGSIZE);
 
         int rt = read(p[0], inbuf, 32);
-        printf("I have requested to read 32 bytes, but only 16 bytes in the pipe so far.\n");
-        printf("This is the %d bytes I read: %s\n", rt, inbuf);
+        printf("I have requested to read 32 bytes, but only  %d  bytes in the pipe so far.\n", rt);
+        printf("This is the  %d  bytes I read: %s\n", rt, inbuf);
 
-	// rt = read(p[0], inbuf,  MSGSIZE);
-        // printf("I have requested to read 32 bytes, but only 16 bytes in the pipe so far.\n");
-        // printf("This is the %d bytes I read: %s\n", rt, inbuf);
+	// rt = read(p[0], inbuf,  32);
+        // printf("I have requested to read 32 bytes, but only  %d  bytes in the pipe so far.\n", rt);
+        // printf("This is the  %d  bytes I read: %s\n", rt, inbuf);
 }

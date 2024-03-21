@@ -10,9 +10,10 @@ int main(int argc, char *argv[]){ // Client
 
 	char ch, fifoName[100];
 	int fd;  
-        pid_t pid;
+    pid_t pid;
 
-	while((fd=open("/tmp/sc2", O_WRONLY))==-1){  
+	while((fd=open("/tmp/sc2", O_WRONLY))==-1)
+	{  
 		fprintf(stderr, "trying to connect\n");  
 		sleep(1);
 	}
@@ -27,12 +28,13 @@ int main(int argc, char *argv[]){ // Client
 
 	fd = open(fifoName, O_RDONLY);  
 
-	int ret=read(fd, &ch, 1);
-	while(ret == 1) {
+	int ret = read(fd, &ch, 1);
+	while(ret == 1) 
+	{
 		fprintf(stderr, "%c", ch);  
-		ret=read(fd, &ch, 1);
+		ret = read(fd, &ch, 1);
 	}
-	printf("ret=%d\n",ret);
+	printf("ret = %d\n",ret);
 	close(fd);
 }
 

@@ -1,0 +1,14 @@
+Script started on 2024-03-19 17:43:31-04:00 [TERM="xterm-256color" TTY="/dev/pts/10" COLUMNS="181" LINES="18"]
+[?2004h]0;pham75@charlie: ~/Courses/COMP_2560/l8[01;32mpham75@charlie[00m:[01;34m~/Courses/COMP_2560/l8[00m$ cc cpq1.c -o test
+[?2004l[?2004h]0;pham75@charlie: ~/Courses/COMP_2560/l8[01;32mpham75@charlie[00m:[01;34m~/Courses/COMP_2560/l8[00m$ ./test
+[?2004l I have read 16 bytes. 
+ This is what I read: hello, world #1 
+ Sleeping until the write end has some inputs
+ I just closed the write end of the pipe and I will attempt to read again...
+ I have read 0 bytes. 
+ This is what I read: hello, world #1 
+ Please read the " read " function manual page to see how it works with a pipe. 
+[?2004h]0;pham75@charlie: ~/Courses/COMP_2560/l8[01;32mpham75@charlie[00m:[01;34m~/Courses/COMP_2560/l8[00m$ [?2004l
+exit
+
+Script done on 2024-03-19 17:44:03-04:00 [COMMAND_EXIT_CODE="0"]

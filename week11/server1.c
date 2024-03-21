@@ -35,7 +35,8 @@ int main(int argc, char *argv[]){
 		exit(1);
 	}
 
-	while(1){
+	while(1)
+	{
 		fprintf(stderr, "Waiting for a client\n");  
 
 		fd = open("/tmp/sc2", O_RDONLY);  
@@ -46,17 +47,20 @@ int main(int argc, char *argv[]){
 		fprintf(stderr, "%ld\n", pid);  
 
 		if(fork()==0)
+		{
 			child(pid);
-		else   {
+		}
+		else  
+		{
 			waitpid(0, &status, WNOHANG);
 			sleep(3);
 			//printf("child pid=%d terminated.\n",wait(NULL)) ;
-
 		}
 	}
 }
 
-void child(pid_t pid){
+void child(pid_t pid)
+{
 	char fifoName[100];  
 	char newline = '\n';  
 	int fd, i;
@@ -69,7 +73,8 @@ void child(pid_t pid){
 
 	fd = open(fifoName, O_WRONLY);  
 
-	for(i=0; i < 10; i++){
+	for(i = 0; i < 10; i++)
+	{
 		write(fd, fifoName, strlen(fifoName));  
 		write(fd, &newline, 1);
 		sleep(1);
