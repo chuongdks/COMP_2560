@@ -11,7 +11,7 @@ int main(int argc, char *argv[]){
 	int fd, fdc;
 	char ch;
 
-	char *str="server received.\n";
+	char *str = "I received your message\n";
 
 	unlink("/tmp/myserver"); // delete it if it exists  
 	if(mkfifo("/tmp/myserver", 0777)!=0)  //create FIFO for server(me) to read
@@ -45,12 +45,14 @@ int main(int argc, char *argv[]){
 
 	while(1)
 	{
+		// Reading content from client.c side
 		while(read(fd, &ch, 1) == 1) 
 		{
-			fprintf(stderr, "%c: ", ch);
-			fprintf(stderr, "%d\n", ch);
+			fprintf(stderr, "%d: %c\n", ch, ch);
 
-			if(ch==10) // ch = 10 is '\n' character, so everytime u pressed enter
+			// ch = 10 is '\n' character, so everytime u pressed enter
+			// server.c will send the msg "str" to client.c for display
+			if(ch==10) 
 			{				
 		        write(fdc, str, strlen(str));
 				printf("wrote ch = %d\n", ch);			
@@ -59,43 +61,5 @@ int main(int argc, char *argv[]){
 	}
 }
 
-
-//what does the above commented code do?
-
-// #include <fcntl.h>
-// #include <stdio.h>
-// #include <unistd.h>
-// #include <stdlib.h>
-// #include <sys/stat.h>
-
-
-// // This is the server
-// int main(int argc, char *argv[]){  
-// 	int fd;
-// 	char ch;
-	
-// 	// ../myserver; /tmp/myserver
-// 	unlink("/tmp/myserver"); // delete it if it exists, dont create multiple files
-
-// 	if(mkfifo("/tmp/myserver", 0777)!=0)  //open("filename", O_CREAT|.., 0777)
-// 	{
-// 		exit(1);
-// 	}
-
-// 	while(1)
-// 	{
-// 		fprintf(stderr, "Waiting for a client\n");  
-
-// 		// Open fd for Read Only
-// 		fd = open("/tmp/myserver", O_RDONLY);  
-// 		fprintf(stderr, "Got a client: ");  
-
-// 		// Read the content from fd and print to STREAM
-// 		while(read(fd, &ch, 1) == 1)
-// 		{
-// 			fprintf(stderr, "%c", ch);
-// 		}
-// 	}
-// }
 
 

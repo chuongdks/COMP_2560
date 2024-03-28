@@ -23,7 +23,8 @@ int main(int argc, char **argv) {
 		exit(1);
 	}
 
-	if ((fd = open(fifo, O_WRONLY|O_NONBLOCK )) < 0) {  //if delete O-NONBLOCK
+	if ((fd = open(fifo, O_WRONLY|O_NONBLOCK )) < 0) 
+	{  // if delete O-NONBLOCK, Block if nobody open fifo other way
 		perror("fifo open failed");
 		exit(4);
 	}
