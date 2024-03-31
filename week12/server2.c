@@ -16,17 +16,17 @@ int main(int argc, char *argv[]){
 	int sd, client;
 	socklen_t len;
 
-	struct sockaddr_in servAdd; //server socket address  
-	struct sockaddr_in cliAdd; //client socket address
+	struct sockaddr_in servAdd; // server socket address  
+	struct sockaddr_in cliAdd; // client socket address
 
 	sd = socket(AF_INET, SOCK_STREAM, 0);
-  
+//172.22.144.201  137.207.82.51"
+	// Prepare server side address structure
 	servAdd.sin_family = AF_INET;  
-	servAdd.sin_addr.s_addr = inet_addr("137.207.82.51"); 
+	servAdd.sin_addr.s_addr = inet_addr("137.207.82.51"); // Run on Delta IP Address
 // or use INADDR_ANY;
 //INADDR_ANY allows your program to work without
 // knowing the IP address of the machine it was running on  
-
 	servAdd.sin_port = 17777; // a port number
 
 //the following two statements were added in case port is not released by 
@@ -44,14 +44,14 @@ int main(int argc, char *argv[]){
 
 	rt=listen(sd, 5);
 
-	while(1){
-
+	while(1)
+	{
 		len = sizeof(cliAdd);
 
 		client=accept(sd,(struct sockaddr*)&cliAdd, &len);  
                      //accept (sd, NULL, NULL);
 
-		rt=write(client, buffer, strlen(buffer) + 1);  
+		rt = write(client, buffer, strlen(buffer) + 1);  
 
 		close(client);
 		break;

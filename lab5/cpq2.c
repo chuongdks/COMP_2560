@@ -81,7 +81,7 @@ void player(char *s, int fd1, int fd2)
         // Random dice
         printf("%s: playing my dice\n", s);
         srand(time(NULL)); // Add this to randomzie more
-        dice = ((int)time(&ss) % 5 + 1) + (rand() % 5 + 1);
+        dice = ((int)time(&ss) % 3 + 1) + (rand() % 7 + 1);
         printf("%s: got %d points\n", s, dice);
         points += dice;
         printf("%s: Total so far %d\n\n", s, points);
@@ -98,4 +98,6 @@ void player(char *s, int fd1, int fd2)
         // Player writes its turn back to the referee
         write(fd2, &turn, 1);
     }
+    close(fd1);
+    close(fd2);
 }

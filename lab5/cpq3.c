@@ -10,8 +10,6 @@ void sigpipe_handler(int signum) {
 
 int main() {
     int pipe_fd[2], error;
-    char *message = "Hello, Pipe!";
-    int message_length = strlen(message) + 1;
 
     // Create pipe
     if (pipe(pipe_fd) == -1) {
@@ -26,7 +24,7 @@ int main() {
     signal(SIGPIPE, sigpipe_handler);
 
     // Write to the pipe
-    if ((error = write(pipe_fd[1], message, message_length)) == -1) 
+    if ((error = write(pipe_fd[1], "Hi", 3)) == -1) 
     {
         printf("write function return %d\n", error);
         perror("pipe problem");

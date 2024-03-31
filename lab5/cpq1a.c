@@ -48,7 +48,7 @@ int main(int argc, char *argv[]){
 		// Reading content from client.c side
 		while(read(fd, &ch, 1) == 1) 
 		{
-			fprintf(stderr, "%d: %c\n", ch, ch);
+			fprintf(stderr, "%c\n", ch);
 
 			// ch = 10 is '\n' character, so everytime u pressed enter
 			// server.c will send the msg "str" to client.c for display

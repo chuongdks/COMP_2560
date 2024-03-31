@@ -1,0 +1,192 @@
+Script started on 2024-03-28 20:08:05-04:00 [TERM="xterm-256color" TTY="/dev/pts/17" COLUMNS="194" LINES="11"]
+[?2004h]0;pham75@charlie: ~/Courses/COMP_2560/l9[01;32mpham75@charlie[00m:[01;34m~/Courses/COMP_2560/l9[00m$ cc cpq3.c -o test
+[?2004l[?2004h]0;pham75@charlie: ~/Courses/COMP_2560/l9[01;32mpham75@charlie[00m:[01;34m~/Courses/COMP_2560/l9[00m$ ./test
+[?2004lThis is a 3-player game with a referee
+
+Referee: TOTO plays
+
+TOTO: playing my dice
+TOTO: got 3 points
+TOTO: Total so far 3
+
+
+Referee: TITI plays
+
+TITI: playing my dice
+TITI: got 4 points
+TITI: Total so far 4
+
+
+Referee: TATA plays
+
+TATA: playing my dice
+TATA: got 5 points
+TATA: Total so far 5
+
+
+Referee: TOTO plays
+
+TOTO: playing my dice
+TOTO: got 6 points
+TOTO: Total so far 9
+
+
+Referee: TITI plays
+
+TITI: playing my dice
+TITI: got 7 points
+TITI: Total so far 11
+
+
+Referee: TATA plays
+
+TATA: playing my dice
+TATA: got 8 points
+TATA: Total so far 13
+
+
+Referee: TOTO plays
+
+TOTO: playing my dice
+TOTO: got 9 points
+TOTO: Total so far 18
+
+
+Referee: TITI plays
+
+TITI: playing my dice
+TITI: got 10 points
+TITI: Total so far 21
+
+
+Referee: TATA plays
+
+TATA: playing my dice
+TATA: got 1 points
+TATA: Total so far 14
+
+
+Referee: TOTO plays
+
+TOTO: playing my dice
+TOTO: got 2 points
+TOTO: Total so far 20
+
+
+Referee: TITI plays
+
+TITI: playing my dice
+TITI: got 3 points
+TITI: Total so far 24
+
+
+Referee: TATA plays
+
+TATA: playing my dice
+TATA: got 4 points
+TATA: Total so far 18
+
+
+Referee: TOTO plays
+
+TOTO: playing my dice
+TOTO: got 5 points
+TOTO: Total so far 25
+
+
+Referee: TITI plays
+
+TITI: playing my dice
+TITI: got 6 points
+TITI: Total so far 30
+
+
+Referee: TATA plays
+
+TATA: playing my dice
+TATA: got 7 points
+TATA: Total so far 25
+
+
+Referee: TOTO plays
+
+TOTO: playing my dice
+TOTO: got 8 points
+TOTO: Total so far 33
+
+
+Referee: TITI plays
+
+TITI: playing my dice
+TITI: got 9 points
+TITI: Total so far 39
+
+
+Referee: TATA plays
+
+TATA: playing my dice
+TATA: got 10 points
+TATA: Total so far 35
+
+
+Referee: TOTO plays
+
+TOTO: playing my dice
+TOTO: got 1 points
+TOTO: Total so far 34
+
+
+Referee: TITI plays
+
+TITI: playing my dice
+TITI: got 2 points
+TITI: Total so far 41
+
+
+Referee: TATA plays
+
+TATA: playing my dice
+TATA: got 3 points
+TATA: Total so far 38
+
+
+Referee: TOTO plays
+
+TOTO: playing my dice
+TOTO: got 4 points
+TOTO: Total so far 38
+
+
+Referee: TITI plays
+
+TITI: playing my dice
+TITI: got 5 points
+TITI: Total so far 46
+
+
+Referee: TATA plays
+
+TATA: playing my dice
+TATA: got 6 points
+TATA: Total so far 44
+
+
+Referee: TOTO plays
+
+TOTO: playing my dice
+TOTO: got 7 points
+TOTO: Total so far 45
+
+
+Referee: TITI plays
+
+TITI: playing my dice
+TITI: got 8 points
+TITI: Total so far 54
+
+TITI: game over I won
+Terminated
+[?2004h]0;pham75@charlie: ~/Courses/COMP_2560/l9[01;32mpham75@charlie[00m:[01;34m~/Courses/COMP_2560/l9[00m$ [?2004l
+exit
+
+Script done on 2024-03-28 20:08:39-04:00 [COMMAND_EXIT_CODE="143"]

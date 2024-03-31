@@ -1,4 +1,4 @@
- #include<unistd.h>
+#include<unistd.h>
 #include<sys/socket.h>
 #include<sys/types.h>
 #include<string.h>
@@ -35,8 +35,8 @@ int main(int argc, char *argv[]){
 
 	servAdd.sin_port = 17777;  //change it to sth else?
 
-	int rt=connect(csd, (struct sockaddr *) &servAdd,  sizeof(servAdd));
-	if (rt==-1)
+	int rt = connect(csd, (struct sockaddr *) &servAdd,  sizeof(servAdd));
+	if (rt == -1)
 	  	perror("connect() failed:");
 	read(csd, buffer, 100);
 
