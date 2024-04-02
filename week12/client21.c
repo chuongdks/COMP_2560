@@ -1,12 +1,10 @@
-#include<string.h>
-#include<netdb.h>
-#include<netinet/in.h>
+#include <string.h>
+#include <netdb.h>
+#include <netinet/in.h>
 #include <arpa/inet.h>
-#include<stdio.h>
-#include<stdlib.h>
-#include<unistd.h>
-
-
+#include <stdio.h>
+#include <stdlib.h>
+#include <unistd.h>
 
 int main(int argc, char *argv[]){  
 	char buffer[100];
@@ -25,7 +23,7 @@ int main(int argc, char *argv[]){
 
 	while(1){
 		read(csd, buffer, 100);
-		fprintf(stderr, "Server’s message: %s\n", buffer);  
+		fprintf(stderr, "Server's message: %s\n", buffer);  
 		fprintf(stderr, "Enter a line to send server\n");
 	
 		//scanf is not the best choice here (why?), try fgets (...)  
