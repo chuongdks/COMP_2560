@@ -50,7 +50,7 @@ int main(int argc, char *argv[]) {
     {
         // Coordinate to Player 1 (Child 1)
         printf("\nReferee: TOTO plays\n\n");
-        write(fd1, &turn, 1);
+        write(fd1, &turn, 1); // You can write anything to the player, ie: string, number, char,...It is just a token
 
         // Parent process waits for response from Player 1 (Child 1)
         read(fd2, &turn, 1);

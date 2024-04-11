@@ -22,7 +22,7 @@ int main() {
 	write(p[1], msg2, MSGSIZE);
 	write(p[1], msg3, MSGSIZE);
 
-	for (j = 0; j < 5; j++) //change 3 to 5
+	for (j = 0; j < 3; j++) //change 3 to 5
 	{  
 		read(p[0], inbuf, MSGSIZE);
 		printf("%s\n", inbuf);

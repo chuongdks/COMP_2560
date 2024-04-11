@@ -9,7 +9,7 @@
 #include <stdlib.h>
 
 /*
-	server2.c file is better, this is for DEMO only
+	server2.c file is better, this is for DEMO only but use stuff from week 13 instead, they are the same
 */
 
 int main(int argc, char *argv[]){

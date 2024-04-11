@@ -12,7 +12,7 @@
 
 
 /*
-	client2.c file is better, this is for DEMO only
+	client2.c file is better, this is for DEMO only but use stuff from week 13 instead, they are the same
 */
 
 

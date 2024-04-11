@@ -1,0 +1,129 @@
+Script started on 2024-03-28 19:56:53-04:00 [TERM="xterm-256color" TTY="/dev/pts/17" COLUMNS="194" LINES="16"]
+[?2004h]0;pham75@charlie: ~/Courses/COMP_2560/lab5[01;32mpham75@charlie[00m:[01;34m~/Courses/COMP_2560/lab5[00m$ cc cpq2.c -o test
+[?2004l[?2004h]0;pham75@charlie: ~/Courses/COMP_2560/lab5[01;32mpham75@charlie[00m:[01;34m~/Courses/COMP_2560/lab5[00m$ ./test
+[?2004lThis is a 2-player game with a referee
+
+Referee: TOTO plays
+
+TOTO: playing my dice
+TOTO: got 7 points
+TOTO: Total so far 7
+
+
+Referee: TITI plays
+
+TITI: playing my dice
+TITI: got 9 points
+TITI: Total so far 9
+
+
+Referee: TOTO plays
+
+TOTO: playing my dice
+TOTO: got 7 points
+TOTO: Total so far 14
+
+
+Referee: TITI plays
+
+TITI: playing my dice
+TITI: got 3 points
+TITI: Total so far 12
+
+
+Referee: TOTO plays
+
+TOTO: playing my dice
+TOTO: got 7 points
+TOTO: Total so far 21
+
+
+Referee: TITI plays
+
+TITI: playing my dice
+TITI: got 2 points
+TITI: Total so far 14
+
+
+Referee: TOTO plays
+
+TOTO: playing my dice
+TOTO: got 6 points
+TOTO: Total so far 27
+
+
+Referee: TITI plays
+
+TITI: playing my dice
+TITI: got 7 points
+TITI: Total so far 21
+
+
+Referee: TOTO plays
+
+TOTO: playing my dice
+TOTO: got 3 points
+TOTO: Total so far 30
+
+
+Referee: TITI plays
+
+TITI: playing my dice
+TITI: got 5 points
+TITI: Total so far 26
+
+
+Referee: TOTO plays
+
+TOTO: playing my dice
+TOTO: got 10 points
+TOTO: Total so far 40
+
+
+Referee: TITI plays
+
+TITI: playing my dice
+TITI: got 6 points
+TITI: Total so far 32
+
+
+Referee: TOTO plays
+
+TOTO: playing my dice
+TOTO: got 4 points
+TOTO: Total so far 44
+
+
+Referee: TITI plays
+
+TITI: playing my dice
+TITI: got 10 points
+TITI: Total so far 42
+
+
+Referee: TOTO plays
+
+TOTO: playing my dice
+TOTO: got 2 points
+TOTO: Total so far 46
+
+
+Referee: TITI plays
+
+TITI: playing my dice
+TITI: got 5 points
+TITI: Total so far 47
+
+
+Referee: TOTO plays
+
+TOTO: playing my dice
+TOTO: got 6 points
+TOTO: Total so far 52
+
+TOTO: game over I won
+Terminated
+[?2004h]0;pham75@charlie: ~/Courses/COMP_2560/lab5[01;32mpham75@charlie[00m:[01;34m~/Courses/COMP_2560/lab5[00m$ [?2004l
+exit
+
+Script done on 2024-03-28 19:57:29-04:00 [COMMAND_EXIT_CODE="143"]

@@ -1,0 +1,10 @@
+Script started on 2024-03-28 19:59:34-04:00 [TERM="xterm-256color" TTY="/dev/pts/17" COLUMNS="194" LINES="11"]
+[?2004h]0;pham75@charlie: ~/Courses/COMP_2560/lab5[01;32mpham75@charlie[00m:[01;34m~/Courses/COMP_2560/lab5[00m$ cc cpq3.c -o test
+[?2004l[?2004h]0;pham75@charlie: ~/Courses/COMP_2560/lab5[01;32mpham75@charlie[00m:[01;34m~/Courses/COMP_2560/lab5[00m$ ./test
+[?2004lCaught the SIGPIPE signal
+write function return -1
+pipe problem: Broken pipe
+[?2004h]0;pham75@charlie: ~/Courses/COMP_2560/lab5[01;32mpham75@charlie[00m:[01;34m~/Courses/COMP_2560/lab5[00m$ [?2004l
+exit
+
+Script done on 2024-03-28 20:00:04-04:00 [COMMAND_EXIT_CODE="0"]

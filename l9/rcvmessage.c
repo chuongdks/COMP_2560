@@ -55,8 +55,8 @@ int main(int argc, char **argv){
 
 		printf("message received:%s\n", msgbuf);
 
-		// // Write the message back to the FIFO, dont do this
-		// if (write(fd, "Fuck you", strlen(msgbuf) + 1) == -1) 
+		// // Write the message back to the FIFO, dont do this, testing only
+		// if (write(fd, "asdwdfuck", strlen(msgbuf) + 1) == -1) 
 		// {
 		// 	perror("message write failed");
 		// 	exit(7);

@@ -4,11 +4,11 @@
 #include <signal.h>
 
 //void myAlarmHandler(int);
-
+// to avoid program being terminated when signal alarmed happened (default action is terminated the signal)
 void myAlarmHandler(int dummy)
 {
 	printf("to avoide to be terminted.\n");
-} // to avoid program being terminated when signal alarmed happened (default action is terminated the signal)
+} 
 
 int main(int argc, char *argv[]){
 	int pid;
@@ -24,8 +24,8 @@ int main(int argc, char *argv[]){
 	else //child process code
 	{ 
 		printf("I have to wait for my parent\n");  
-		signal(SIGALRM, myAlarmHandler);   
-		pause(); // Child PAUSE will be wake up by the kill()
+		signal(SIGALRM, myAlarmHandler); // instruction on how to handle SIGALARM
+		pause(); // Child PAUSE will be wake up by the kill() function
 		printf("OK, now I can do my job\n");  
 		sleep(2);
 		printf("Child Exiting\n");
@@ -33,4 +33,6 @@ int main(int argc, char *argv[]){
 	exit(0);
 }
 
+//parent    child
+//kill      pause
 

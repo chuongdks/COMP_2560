@@ -1,6 +1,5 @@
 /* rlsd.c - a remote ls server - with paranoia
  */
-
 #include  <stdio.h>
 #include  <unistd.h>
 #include  <sys/types.h>
@@ -20,23 +19,22 @@ void sanitize(char *str);
 
 int main(int ac, char *av[])
 {
-	struct  sockaddr_in   saddr;   /* build our address here */
-	struct	hostent		*hp;   /* this is part of our    */
-	char	hostname[HOSTLEN];     /* address 	         */
-	int	sock_id,sock_fd;       /* line id, file desc     */
-	FILE	*sock_fpi, *sock_fpo;  /* streams for in and out */
-	FILE	*pipe_fp;	       /* use popen to run ls    */
-	char    dirname[BUFSIZ];       /* from client            */
-	char    command[BUFSIZ];       /* for popen()            */
-	int	dirlen, c;
+	struct  sockaddr_in		saddr;		/* build our address here */
+	struct	hostent			*hp;   		/* this is part of our    */
+	char	hostname[HOSTLEN];     		/* address 	         */
+	int		sock_id,sock_fd;       		/* line id, file desc     */
+	FILE	*sock_fpi,		*sock_fpo;	/* streams for in and out */
+	FILE	*pipe_fp;	       			/* use popen to run ls    */
+	char    dirname[BUFSIZ];       		/* from client            */
+	char    command[BUFSIZ];       		/* for popen()            */
+	int		dirlen, c;
 
-      /** Step 1: ask kernel for a socket **/
-
+    /** Step 1: ask kernel for a socket **/
 	sock_id = socket( PF_INET, SOCK_STREAM, 0 );    /* get a socket */
 	if ( sock_id == -1 ) 
 		oops( "socket" );
 
-      /** Step 2: bind address to socket.  Address is host,port **/
+    /** Step 2: bind address to socket.  Address is host,port **/
 
 	bzero( (void *)&saddr, sizeof(saddr) ); /* clear out struct     */
 	gethostname( hostname, HOSTLEN );       /* where am I ?         */

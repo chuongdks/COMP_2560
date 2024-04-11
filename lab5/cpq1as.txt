@@ -1,0 +1,17 @@
+Script started on 2024-03-28 19:50:03-04:00 [TERM="xterm-256color" TTY="/dev/pts/17" COLUMNS="84" LINES="16"]
+[?2004h]0;pham75@charlie: ~/Courses/COMP_2560/lab5[01;32mpham75@charlie[00m:[01;34m~/Courses/COMP_2560/lab5[00m$ cc cpq1a.c -o test
+[?2004l[?2004h]0;pham75@charlie: ~/Courses/COMP_2560/lab5[01;32mpham75@charlie[00m:[01;34m~/Courses/COMP_2560/lab5[00m$ ./test
+[?2004lWaiting for a client
+Got a client (for reading): server side: Connected both ways.
+strlen(str) = 24
+a
+b
+c
+
+
+wrote ch = 10
+^C
+[?2004h]0;pham75@charlie: ~/Courses/COMP_2560/lab5[01;32mpham75@charlie[00m:[01;34m~/Courses/COMP_2560/lab5[00m$ [?2004l
+exit
+
+Script done on 2024-03-28 19:51:08-04:00 [COMMAND_EXIT_CODE="130"]

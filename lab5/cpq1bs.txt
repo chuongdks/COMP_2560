@@ -1,0 +1,16 @@
+Script started on 2024-03-28 19:50:10-04:00 [TERM="xterm-256color" TTY="/dev/pts/18" COLUMNS="83" LINES="16"]
+[?2004h]0;pham75@charlie: ~/Courses/COMP_2560/lab5[01;32mpham75@charlie[00m:[01;34m~/Courses/COMP_2560/lab5[00m$ cc cpq1b.c -o test1
+[?2004l[?2004h]0;pham75@charlie: ~/Courses/COMP_2560/lab5[01;32mpham75@charlie[00m:[01;34m~/Courses/COMP_2560/lab5[00m$ ./test1
+[?2004labc
+client side: Connected both ways: type in data to be sent
+wrote ch: 97
+wrote ch: 98
+wrote ch: 99
+wrote ch: 10
+I am reading msg From the Server.
+I received your message
+^C
+[?2004h]0;pham75@charlie: ~/Courses/COMP_2560/lab5[01;32mpham75@charlie[00m:[01;34m~/Courses/COMP_2560/lab5[00m$ [?2004l
+exit
+
+Script done on 2024-03-28 19:51:08-04:00 [COMMAND_EXIT_CODE="130"]
