@@ -8,6 +8,7 @@ int main(){
 
 	int pid=fork();  
 	
+	// The Parent process will trigger the alarm and got terminated, and the Child process will continue
 	while(1){
 		if(pid==0)
 			printf("I am the child \n");  

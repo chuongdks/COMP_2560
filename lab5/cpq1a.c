@@ -14,7 +14,7 @@ int main(int argc, char *argv[]){
 	char *str = "I received your message\n";
 
 	unlink("/tmp/myserver"); // delete it if it exists  
-	if(mkfifo("/tmp/myserver", 0777)!=0)  //create FIFO for server(me) to read
+	if(mkfifo("/tmp/myserver", 0777)!=0)  //create FIFO for server to read
 	{
 		exit(1);
 	}

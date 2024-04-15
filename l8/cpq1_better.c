@@ -51,7 +51,7 @@ int main() {
         else 
         { 
                 write(p[1], msg1, MSGSIZE);
-                sleep(5);
+                sleep(5); // Dekay to demonstrate Rule #2
                 write(p[1], msg2, MSGSIZE);
                 write(p[1], msg3, MSGSIZE);
                 close(p[0]);  //close the read end of the pipe

@@ -49,7 +49,7 @@ int main(int argc, char **argv){
 		// if (num == 0) 
 		// {
 		// 	printf("nothing to read or no write end.\n");
-		// 	// continue;
+		// 	// continue; // This will continue the infinite loop
 		// 	break;
 		// } 	
 

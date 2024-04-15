@@ -9,7 +9,7 @@ int main(int argc, char *argv[]){
     oldHandler1 = signal(2, SIG_IGN); //ignore CTRL-C  
     oldHandler2 = signal(20, SIG_IGN); // ignore CTRL-Z
 
-    if(fork()!=0) // Parent
+    if(fork()!=0) // During the first 10 seconds, Parent and Child both ignore Ctrl + C/Z. After that, only parent restore to Default Action and child keep ignoring
     {
         for(int i = 1; i <= 10; i++)
         {

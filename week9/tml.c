@@ -1,5 +1,3 @@
-//
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <sys/types.h>
@@ -26,7 +24,6 @@ int main(int argc, char **argv) {
 		fprintf(stderr, "Usuage: tml #minutes message\n");
 		exit(1);
 	}
-
 	if ((nsecs = atoi(argv[1]) * 60) <= 0){
 		fprintf(stderr, "tml: invalid time \n");
 		exit(2);

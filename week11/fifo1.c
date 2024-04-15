@@ -1,6 +1,6 @@
 // C program to implement one side of FIFO
 // This side writes first, then reads
-// Monkey to Monkey communication 1 at a time
+// One side Write the other read and vice versa
 #include <stdio.h>
 #include <string.h>
 #include <fcntl.h>

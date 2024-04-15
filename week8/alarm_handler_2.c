@@ -8,7 +8,7 @@ void alarm_handler(int dummy)
 {
 	printf("I got an alarm, I took care of signal %d\n", dummy);  
 	signal(14, alarm_handler); //install handler
-	alarm(3);
+	alarm(3); // The alarm signal handling will be trigger again!
 }
 
 int main(int argc, char *argv[]){

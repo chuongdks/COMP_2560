@@ -27,7 +27,7 @@ int main (int argc, char **argv) {
     // 1. Socketcreation of the socket
     listenfd = socket (AF_INET, SOCK_STREAM, 0);
 
-    //preparation of the socket address, https://www.youtube.com/watch?v=bApd0QFsErU
+    //preparation of the socket address
     servaddr.sin_family = AF_INET;
     servaddr.sin_addr.s_addr = htonl(INADDR_ANY); // htonl() convert to big-endian order
     servaddr.sin_port = htons(SERV_PORT);

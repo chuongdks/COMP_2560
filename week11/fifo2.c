@@ -1,6 +1,6 @@
 // C program to implement one side of FIFO
 // This side reads first, then writes
-// Monkey to Monkey communication 1 at a time
+// One side Write the other read and vice versa
 #include <stdio.h>
 #include <string.h>
 #include <fcntl.h>
@@ -29,7 +29,7 @@ int main()
 		printf("User1: %s\n", str1);
 		close(fd1);
 
-		// Now open in write mode and write string taken from user.
+		// Now open in write mode and write to fifo1.c
 		fd1 = open(myfifo, O_WRONLY);
 		fgets(str2, 80, stdin);
 		write(fd1, str2, strlen(str2)+1);

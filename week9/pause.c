@@ -23,7 +23,7 @@ int main(int argc, char *argv[]){
 	{
 		int rt;
 		rt=pause();
-		printf("pause just returned , return value = %d \n", rt);
+		printf("pause just returned , return value = %d \n", rt); // pauise return -1 if a signal is caught
     }
 }
 

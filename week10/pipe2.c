@@ -1,4 +1,3 @@
-//**************************************************************************************************************************************************
 #include <unistd.h>
 #include <stdio.h>
 #include <stdlib.h>
@@ -19,18 +18,19 @@ int main() {
 		perror("pipe call error!");
 		exit(1);
 	}
-	switch (pid = fork()) {
+
+	switch (pid = fork()) 
+	{
 		case -1:
 			perror(" fork call");
 			exit(2);
 		case 0: //child process	
 			write(p[1], msg1, MSGSIZE);
-	
 			write(p[1], msg2, MSGSIZE);
-
 			write(p[1], msg3, MSGSIZE);
 			break;
-		default: //parent
+
+		default: // parent process
 			for (j = 0; j < 3; j++){ //change 3 to 5 again
 				read(p[0], inbuf, MSGSIZE);
 

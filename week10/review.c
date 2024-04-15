@@ -3,9 +3,7 @@
 #include <unistd.h>
 #include <stdlib.h>
 
-//run this prg a few times to see how parent 
-//and child process corrdinate with each other
-// child write parent read (pcs2.c)
+// child write to a file pointer and parent read from it (pcs2.c)
 
 // Dummy function so that signal() will have something
 void action(int dummy)

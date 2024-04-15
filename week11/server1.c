@@ -42,7 +42,7 @@ int main(int argc, char *argv[]){
 
 		fd = open("/tmp/sc2", O_RDONLY);  
 		fprintf(stderr, "Got a client: ");  
-		read(fd, &pid, sizeof(pid_t)); // read the client pid
+		read(fd, &pid, sizeof(pid_t)); // waiting to read the client pid
 		close(fd);
 
 		fprintf(stderr, "%ld\n", pid);  
@@ -70,12 +70,14 @@ void child(pid_t pid)
 	sprintf(fifoName,"/tmp/fifo%d", pid);  
 	unlink(fifoName);
 	mkfifo(fifoName, 0777);
-
+	
+	// Open the new file based on fifo Name that child function have already mkfifo() for
 	fd = open(fifoName, O_WRONLY);  
 
+	 // Write to client side a string of "fifoName" 10 times
 	for(i = 0; i < 10; i++)
 	{
-		write(fd, fifoName, strlen(fifoName));  // Write to client side a string
+		write(fd, fifoName, strlen(fifoName)); 
 		write(fd, &newline, 1);
 		sleep(1);
 	}

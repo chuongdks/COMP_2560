@@ -9,6 +9,7 @@
 /* 
 How to use:
 ./sendmessage "message 1 text"  "messgae 2 text"  ... 
+and send the msg arguments to the file rcvmessage.c
 */
 
 #define MSGSIZE 63
@@ -26,7 +27,7 @@ int main(int argc, char **argv) {
 	}
 
 	// Open fifo file for writing
-	if ((fd = open(fifo, O_RDONLY|O_NONBLOCK )) < 0) // if delete O-NONBLOCK, Block if nobody open fifo other way |O_NONBLOCK 
+	if ((fd = open(fifo, O_WRONLY|O_NONBLOCK )) < 0) // if delete O-NONBLOCK, Block if nobody open fifo other way |O_NONBLOCK 
 	{  
 		perror("fifo open failed");
 		exit(4);

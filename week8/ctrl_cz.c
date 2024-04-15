@@ -26,8 +26,8 @@ int main(int argc, char *argv[]){
 		sleep(1);
 	}
 
-	signal(2, oldHandler1); // restore default  
-	signal(20, oldHandler2); // restore default  
+	signal(2, oldHandler1); // call signal to use the default action of CTRL + C
+	signal(20, oldHandler2); // call signal to use the default action of CTRL + Z 
 
 	for(i=1; i<=10; i++)
 	{

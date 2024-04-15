@@ -1,13 +1,11 @@
-//**************************************************************************************************************************************************
 #include <unistd.h>
 #include <signal.h>
 #include <stdio.h>
 #include<stdlib.h>
 
-//interesting progam to figure out what's going on.
-//and see how coordination is achieved
+//interesting progam to figure out what's going on. And see how coordination is achieved
 
-int ntimes = 0;
+int ntimes = 0; // Global Variable
 
 void p_action(int sig){
 	printf("Parent caught signal #%d\n", ++ntimes);
@@ -25,7 +23,7 @@ int main(){
 		case -1: 
 			perror("synchro");
 			exit(1);
-		case 0:  //child n
+		case 0:  //child 
 			signal(SIGUSR1, c_action);
 			
 			ppid = getppid();
@@ -33,19 +31,15 @@ int main(){
 			for (;;)
 			{
 				sleep(1);
-				kill(ppid, SIGUSR1);
-				pause();
-				//pause(); 
-				//sleep(1);
-				//kill(ppid, SIGUSR1); 
+				kill(ppid, SIGUSR1); // Send signal to Parent
+				pause(); // Wating for Parent
 			}
-		default: 
-		
+		default: // Parent
 			for (;;)
 			{
-				pause();
+				pause(); // Wating for Child
 				sleep(1);
-				kill(pid, SIGUSR1);
+				kill(pid, SIGUSR1); // Send signal to Child
 			}
 	}
 }

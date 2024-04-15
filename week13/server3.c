@@ -15,7 +15,6 @@
 #define SIZE sizeof(struct sockaddr_in)
 
 // Client use the Server to transform lower case character to Upper case
-// https://www.youtube.com/watch?v=bApd0QFsErU
 
 void catcher(int sig); //???
 

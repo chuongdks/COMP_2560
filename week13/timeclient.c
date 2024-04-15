@@ -1,5 +1,5 @@
 /* timeclnt.c - a client for timeserv.c
- *              usage: timeclnt hostname portnumber
+ *              usage: timeclnt hostname portnumber(Port number: 13000, based on Server)
  */
 #include       <stdio.h>
 #include       <sys/types.h>
@@ -20,42 +20,31 @@ int main(int ac, char *av[])
 	char   message[BUFSIZ];             /* to receive message */
 	int    messlen;                     /* for message length */
 
-     /*
-      * Step 1: Get a socket
-      */
 
+    // Step 1: Get a socket
 	sock_id = socket( AF_INET, SOCK_STREAM, 0 );    /* get a line   */
 	if ( sock_id == -1 ) 
 		oops( "socket" );          		/* or fail      */
 
-     /*
-      * Step 2: connect to server
-      *         need to build address (host,port) of server  first
-      */
-
+    // Step 2: connect to server need to build address (host,port) of server  first
 	bzero( &servadd, sizeof( servadd ) );   /* zero the address     */
-
 	hp = gethostbyname( av[1] );            /* lookup host's ip #   */
 	if (hp == NULL) 
 		oops(av[1]);            	/* or die               */
 	bcopy(hp->h_addr, (struct sockaddr *)&servadd.sin_addr, hp->h_length);
-
 	servadd.sin_port = htons(atoi(av[2]));  /* fill in port number  */
-
 	servadd.sin_family = AF_INET ;          /* fill in socket type  */
-
 						       /* now dial     */
-	if ( connect(sock_id,(struct sockaddr *)&servadd, sizeof(servadd)) !=0)
+
+	if (connect(sock_id,(struct sockaddr *)&servadd, sizeof(servadd)) !=0)
 	       oops( "connect" );
 
-     /*
-      * Step 3: transfer data from server, then hangup
-      */
-
-	messlen = read(sock_id, message, BUFSIZ);     /* read stuff   */
-	if ( messlen == - 1 )
+	// Step 3: transfer data from server, then hangup
+	messlen = read(sock_id, message, BUFSIZ);     /* read stuff from Server */
+	if (messlen == - 1 )
 	       oops("read") ;
-	if ( write( 1, message, messlen ) != messlen )  /* and write to */
-	       oops( "write" );                        /* stdout       */
+
+	if (write(1, message, messlen ) != messlen )  /* and write to stdout*/
+	       oops( "write" );                      
 	close( sock_id );    
 }

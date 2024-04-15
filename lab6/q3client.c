@@ -35,7 +35,7 @@ int main() {
     printf("Server asked: %s", buffer);
     send(sockfd, "test.txt", strlen("test.txt"), 0); // Sending filename to Server
     
-    // Receiving file from server and saving it locally
+    // Open the file for Writing first
     file = fopen(filename, "w");
     if (file == NULL) 
     {
@@ -43,9 +43,12 @@ int main() {
         exit(1);
     }
 
-    recv(sockfd, buffer, sizeof(buffer), 0);
-    fwrite(buffer, 1, sizeof(buffer), file);
-    
+    // Receiving file from server and saving it locally 
+    while (recv(sockfd, buffer, sizeof(buffer), 0) > 0)
+    {
+        fputs (buffer, file);
+    }
+
     fclose(file);
     printf("File received successfully\n");
 
